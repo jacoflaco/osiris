@@ -1,0 +1,194 @@
+/* =========================================
+   HEADER
+   ========================================= */
+header
+	background-color: $darkblue
+	height: 75px
+	position: fixed
+	width: 100%
+	z-index: 2
+
+#logo
+	background: url('../images/header/logo.png') no-repeat
+	background-size: cover
+	display: inline-block
+	height: 65px
+	margin: 3px 0 3px 10px
+	width: 200px
+
+nav
+	float: right
+	width: 900px
+
+#secondary
+	float: right
+	list-style-type: none
+	padding-left: 30px
+	padding-right: 30px
+
+	>li
+		float: left
+		padding: 0 15px
+
+	.secondary-links
+		color: $white
+		font: 19.2px/32px $lighttext
+		font-variant: small-caps
+		letter-spacing: 2px
+		text-decoration: none
+		transition: color .1s ease-in-out
+		&:hover
+			color: darken($white, 10%)
+
+#primary
+	border-top: 1px solid $white
+	float: right
+	list-style-type: none
+	padding: 0 25px
+
+	>li
+		float: left
+		padding: 8px 0 10px 0
+		margin: 1px 0 0 0
+
+	.primary-links
+		color: $white
+		font: 20.8px/20.8px $lighttext
+		font-variant: small-caps
+		letter-spacing: 2px
+		padding: 7px 20px 10px
+		transition: all .2s ease-in-out
+		text-decoration: none
+		&:after
+			color: $white
+			content: "\25BE"
+			font-size: 2.8px
+			padding-left: 10px
+			vertical-align: middle
+		&:hover
+			background-color: $bluegreen
+			border-bottom: 1px solid $bluegreen
+
+	.primary2-links
+		color: $white
+		font: 20.8px/20.8px $lighttext
+		font-variant: small-caps
+		letter-spacing: 2px
+		padding: 7px 20px 10px
+		transition: all .2s ease-in-out
+		text-decoration: none
+		&:hover
+			background-color: $bluegreen
+			border-bottom: 1px solid $bluegreen
+
+
+
+#primary-list-item-1:hover .dropdown-menu
+	opacity: 1
+	position: fixed
+	right: 667px
+	top: 75px
+	transition: visibility 0s, opacity .2s ease-in-out
+	visibility: visible
+
+
+#primary-list-item-2:hover .dropdown-menu
+	opacity: 1
+	position: fixed
+	right: 429px
+	top: 75px
+	transition: visibility 0s, opacity .2s ease-in-out
+	visibility: visible
+
+#primary-list-item-3:hover .dropdown-menu
+	opacity: 1
+	position: fixed
+	right: 235px
+	top: 75px
+	transition: visibility 0s, opacity .2s ease-in-out
+	visibility: visible
+
+#primary-list-item-4:hover .dropdown-menu
+	opacity: 1
+	position: fixed
+	right: 25px
+	top: 75px
+	transition: visibility 0s, opacity .2s ease-in-out
+	visibility: visible
+
+.dropdown-menu
+	background: darken($white, 10%)
+	list-style-type: none
+	opacity: 0
+	position: fixed
+	visibility: hidden
+	width: 320px
+	&:hover + .primary-links
+		background: $bluegreen
+		border-bottom: 1px solid $bluegreen
+
+	.dropdown-list-items
+		transition: all .2s ease-in-out
+		&:hover
+			background: $bluegreen
+		&:hover .dropdown-links
+			color: $white
+
+	.dropdown-links
+		color: $darkblue
+		display: inline-block
+		font: 19.2px/19.2px $lighttext
+		font-variant: small-caps
+		letter-spacing: 2px
+		padding: 15px
+		text-decoration: none
+		width: 290px
+
+/* =========================================
+   ALT-HEADER
+   ========================================= */
+
+#secondary-list-item-1:hover .dropdown-menu
+	opacity: 1
+	position: fixed
+	right: 385px
+	top: 32px
+	transition: visibility 0s, opacity .2s ease-in-out
+	visibility: visible
+
+
+#secondary-list-item-2:hover .dropdown-menu
+	opacity: 1
+	position: fixed
+	right: 263px
+	top: 32px
+	transition: visibility 0s, opacity .2s ease-in-out
+	visibility: visible
+
+#secondary-list-item-3:hover .dropdown-menu
+	opacity: 1
+	position: fixed
+	right: 180px
+	top: 32px
+	transition: visibility 0s, opacity .2s ease-in-out
+	visibility: visible
+
+#secondary-list-item-4:hover .dropdown-menu
+	opacity: 1
+	position: fixed
+	right: 25px
+	top: 32px
+	transition: visibility 0s, opacity .2s ease-in-out
+	visibility: visible
+
+.alt-primary-links
+		color: $white
+		font: 20.8px/20.8px $lighttext
+		font-variant: small-caps
+		letter-spacing: 2px
+		padding: 7px 20px 10px
+		transition: all .2s ease-in-out
+		text-decoration: none
+		&:hover
+			background-color: $bluegreen
+			border-bottom: 1px solid $bluegreen

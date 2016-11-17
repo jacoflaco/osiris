@@ -1,0 +1,246 @@
+/* =========================================
+	 INDEX
+   ========================================= */
+
+/**************** banner ****************/
+.banner
+	background: url('../images/index/banner.jpg') top no-repeat fixed
+	background-size: 100%
+	border-bottom: 10px solid $bluegreen
+	display: block
+	height: 33vw
+	width: 100%
+
+.headline
+	float: right
+	display: block
+	position: absolute
+	right: 12vw
+	text-align: center
+	top: 12vw
+	width: 76%
+
+.headline-text
+	color: $white
+	font: 4.5vw $luxurytext
+	letter-spacing: 1.8vw
+	margin: 0 0 2vw 0
+	padding: 0
+	text-shadow: 2px 3px 10px $darkgray
+
+	-webkit-text-stroke: .3vw $white
+
+	span
+		padding: 1px
+
+.headline-btn
+	background-color: $bluegreen
+	border: .3vw solid $bluegreen
+	border-radius: .2vw
+	color: $white
+	font: 1.4vw $luxurytext
+	letter-spacing: 2px
+	padding: .8vw 2vw .8vw 2vw
+	position: absolute
+	text-decoration: none
+	transition: all .2s ease-in-out
+
+	-webkit-text-stroke: .1vw $white
+
+	span
+		padding: 1px
+
+.headline-btn:hover
+	background-color: darken($bluegreen, 2%)
+	border: .3vw solid darken($bluegreen, 2%)
+	box-shadow: 8px 5px 10px $darkgray
+	text-shadow: 3px 2px 10px $darkgray
+	transform: translateY(-5px)
+
+
+/**************** destinations ****************/
+.destinations-wrapper
+	margin: 0 auto
+	width: 76%
+
+	> hr
+		color: $gold
+		background: $gold
+		border: none
+		float: right
+		height: 3px
+		//margin-top: 35px
+		position: relative
+		top: -38px
+		width: 85%
+		z-index: -1
+
+.section-header
+	background: $white
+	color: $gold
+	font: 2.5rem $luxurytext
+	float: left
+	display: inline-block
+	//margin: 15px 0 20px 0
+	position: relative
+	top: 15px
+	z-index: 1
+
+	-webkit-text-stroke: 2px $gold
+
+.section-header-flower
+	background: $white
+	margin: 37px 0 0 0
+	padding: 5px 10px 0 0
+	position: relative
+	z-index: 1
+
+.destinations
+	background: url(../images/image-links/destinations-background.png) no-repeat
+	background-size: contain
+	height: 34vw
+	margin: 10px 0 0 0
+	padding: 1.5vw
+	width: 72vw
+
+.destination-boxes
+	border: 5px solid $white
+	color: $white
+	float: left
+	height: 16vw
+	margin: 0 1.6vw 2vw 0
+	width: 31%
+	transition: all .3s ease-in-out
+
+	-webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+	img
+		display: block
+		margin: 0 auto
+		max-width: 10vw
+
+.destination-boxes:hover
+	background: $white
+	color: $darkblue
+
+.city-names
+	font: 2vw $luxurytext
+	margin: 8% 0 1% 0
+	text-align: center
+
+.country-names
+	font: 2vw $luxurytext
+	margin: 0
+	padding: 0
+	text-align: center
+
+/************************ lines on headers ************************/
+
+.text-sections
+	margin: 50px auto 50px auto
+	width: 75%
+
+.text-header
+	font: 1.6rem $lighttext
+	//margin: 0 auto
+	padding: 0 0 30px 0
+	position: relative
+	text-align: center
+	//width: 45%
+
+	-webkit-text-stroke: .6px $darkgray
+
+	span
+		background: $white
+		padding: 0 15px
+		position: relative
+		z-index: 1
+
+.text-header:before
+	background: $darkgray
+	content: ""
+	display: block
+	height: 1px
+	position: absolute
+	top: 30%
+	width: 100%
+
+.text-header:before
+  left: 0
+
+.body-text
+	color: $darkgray
+	font: 1rem $lighttext
+	letter-spacing: 1px
+	text-align: center
+
+#collage-container
+	background: url(../images/index/collage.png) no-repeat
+	background-size: 100%
+	height: 17vw
+	width: 100%
+
+/* =========================================
+	 HOTELS
+   ========================================= */
+
+.hotels-wrapper
+	margin: 0 auto
+	width: 76%
+
+	> hr
+		color: $gold
+		background: $gold
+		border: none
+		float: right
+		height: 3px
+		//margin-top: 35px
+		position: relative
+		top: -38px
+		width: 85%
+		z-index: -1
+
+.hotels
+	background: url(../images/image-links/hotels-background.png) no-repeat
+	background-size: contain
+	height: 16vw
+	margin: 10px 0 0 0
+	padding: 1.25vw 1.7vw 1.25vw 1.7vw
+	width: 72vw
+
+.hotel-boxes
+	border: 5px solid $white
+	float: left
+	height: 16vw
+	width: 31%
+	margin: 0 1.6vw 2vw 0
+
+	-webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+#azure-box
+	background: url(../images/image-links/azure.png) no-repeat
+	background-size: cover
+	transition: all .3s ease-in-out
+	&:hover
+		background: url(../images/image-links/azureHover.png) no-repeat
+		background-size: cover
+
+#emerald-box
+	background: url(../images/image-links/emerald.png) no-repeat
+	background-size: cover
+	transition: all .3s ease-in-out
+	&:hover
+		background: url(../images/image-links/emeraldHover.png) no-repeat
+		background-size: cover
+
+#villa-box
+	background: url(../images/image-links/villa.png) no-repeat
+	background-size: cover
+	transition: all .3s ease-in-out
+	&:hover
+		background: url(../images/image-links/villaHover.png) no-repeat
+		background-size: cover
