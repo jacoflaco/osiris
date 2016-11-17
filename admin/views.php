@@ -25,7 +25,7 @@
 
 				<a class='mainbuttons button-2-cols' href='viewadmin.php'>Admin</a>
 				<a class='mainbuttons button-2-cols' href='viewbill.php'>Bill</a>
-				<a class='mainbuttons button-2-cols' href='viewhotel.php'>Hotel</a>
+				<a class='mainbuttons button-2-cols' href='viewhotels.php'>Hotels</a>
 				<a class='mainbuttons button-2-cols' href='viewpaymentdetails.php'>Payment Details</a>
 				<a class='mainbuttons button-2-cols' href='viewreservation.php'>Reservation</a>
 				<a class='mainbuttons button-2-cols' href='viewreservationdetails.php'>Reservation Details</a>

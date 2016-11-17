@@ -44,8 +44,8 @@
 		if ($dbEmail === $email){
 
 			if ($dbPassword === $password){
-				$_SESSION['email'] = $dbEmail;
-				$_SESSION['password'] = $dbPassword;
+				$_SESSION['adminEmail'] = $dbEmail;
+				$_SESSION['adminPpassword'] = $dbPassword;
 
 				//store the email from the user info where the password matches the one submitted
 				$get = mysqli_query($con, "select * from O_ADMIN where email = '$email' AND password = '$password' ") or die(mysql_error());

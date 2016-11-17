@@ -20,15 +20,6 @@
   <script type="text/javascript" language="javascript" src="../js/jquery.js"></script>
   <script type="text/javascript" language="javascript" src="../js/jquery.dataTables.min.js"></script>
 
-	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.6/jq-2.2.3/dt-1.10.12/af-2.1.2/b-1.2.2/b-colvis-1.2.2/b-print-1.2.2/cr-1.3.2/fc-3.2.2/fh-3.1.2/r-2.1.0/sc-1.4.2/se-1.2.0/datatables.min.css"/> -->
-	<!-- <script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.6/jq-2.2.3/dt-1.10.12/af-2.1.2/b-1.2.2/b-colvis-1.2.2/b-print-1.2.2/cr-1.3.2/fc-3.2.2/fh-3.1.2/r-2.1.0/sc-1.4.2/se-1.2.0/datatables.min.js"></script>  -->
-
-  <script type="text/javascript" charset="utf-8">
-    $(document).ready(function() {
-      var table = $('#datatables').DataTable();
-    })
-  </script>
-
 	<link rel='stylesheet' type='text/css' href='../css/style.css'>
 
 	<!-- Favicon Code -->
@@ -46,7 +37,7 @@
 
 				<header>
 
-					<a href='index.php'><div id='logo'></div></a>
+					<a href='../index.php'><div id='logo'></div></a>
 
 					<nav>
 
@@ -66,7 +57,7 @@
 
 						<ul id='primary'>
 							<li id='primary-list-item-1'>
-								<a href='adminhome.php' class='primary2-links'>home</a>
+								<a href='adminhome.php' class='primary2-links'>control</a>
 							</li>
 							<li id='primary-list-item-2'>
 								<a href='newentry.php' class='primary2-links'>new entry</a>

@@ -14,7 +14,7 @@
 
 	include '../01-modules/adminheader.php';
 
-	$query = "select * from O_VW_USER";
+	$query = "select * from O_VW_HOTELS";
   $result = mysqli_query($con, $query);
 
   $result_array = array();
@@ -29,7 +29,7 @@
 <div class="report-container">
 
 	<div id="report-wrapper">
-	<h3 class="report-header">view users</h3>
+	<h3 class="report-header">view hotels</h3>
 
 
 		<div class="report-transparent-container">
@@ -37,13 +37,11 @@
 			<table id='datatables'>
 	      <thead>
 	        <tr>
-	          <td>User ID</td>
-	          <td>First Name</td>
-	          <td>Last Name</td>
-	          <td>Email</td>
-	          <td>DoB</td>
-						<td>Phone Number</td>
-						<td>IsActivated</td>
+	          <td>Resort Hotel ID</td>
+	          <td>Hotel Name</td>
+	          <td>City</td>
+	          <td>State</td>
+	          <td>Country</td>
 	        </tr>
 	      </thead>
 
@@ -52,13 +50,11 @@
 	          while($row = mysqli_fetch_array($result)) {
 	            ?>
 	            <tr>
-								<td><?php print $row['UserID']; ?></td>
-	              <td><?php print $row['FirstName']; ?></td>
-	              <td><?php print $row['LastName']; ?></td>
-	              <td><?php print $row['Email']; ?></td>
-	              <td><?php print $row['DoB']; ?></td>
-								<td><?php print $row['PhoneNumber']; ?></td>
-								<td><?php print $row['IsActivated']; ?></td>
+								<td><?php print $row['ResortHotelID']; ?></td>
+	              <td><?php print $row['HotelName']; ?></td>
+	              <td><?php print $row['City']; ?></td>
+	              <td><?php print $row['State']; ?></td>
+	              <td><?php print $row['Country']; ?></td>
 	            </tr>
 	            <?php
 	          }
@@ -67,13 +63,11 @@
 
 	      <tfoot>
 	        <tr>
-						<td>User ID</td>
-	          <td>First Name</td>
-	          <td>Last Name</td>
-	          <td>Email</td>
-	          <td>DoB</td>
-						<td>Phone Number</td>
-						<td>IsActivated</td>
+						<td>Resort Hotel ID</td>
+	          <td>Hotel Name</td>
+	          <td>City</td>
+	          <td>State</td>
+	          <td>Country</td>
 	        </tr>
 	      </tfoot>
 
