@@ -12,8 +12,15 @@
 	require_once '../00-utility/functions.php';
 	require_once '../00-utility/dbconnect.php';
 
+	$_SESSION['timeout'] = time();
+
 	$message = '';
 	$message2 = '';
+
+	//if the user is already logged in
+	if(isset($_SESSION['admin'])) {
+		header('location: adminhome.php');
+	}
 
 	//if user already filled in login info
 	if(isset($_POST['loginsubmit'])) {

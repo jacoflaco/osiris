@@ -29,9 +29,9 @@
 
 			<div class="form-section-divs">
 
-				<a class='mainbuttons form-input-1-cols' href='newentry.php'>New Entry</a>
-				<a class='mainbuttons form-input-1-cols' href='views.php'>Views</a>
-				<a class='mainbuttons form-input-1-cols' href='https://corsair.cs.iupui.edu/phpmyadmin/'>phpMyAdmin</a>
+				<a class='mainbuttons button-2-cols' href='newentry.php'>New Entry</a>
+				<a class='mainbuttons button-2-cols' href='views.php'>Views</a>
+				<a class='mainbuttons button-2-cols' href='https://corsair.cs.iupui.edu/phpmyadmin/'>phpMyAdmin</a>
 
 			</div>
 

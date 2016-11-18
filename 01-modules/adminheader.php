@@ -14,14 +14,19 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<title>Experience Osiris</title>
 
+
+
 	<link rel="stylesheet" type="text/css" href="../css/datatables/jquery.dataTables_themeroller.css">
   <link rel="stylesheet" type="text/css" href="../css/datatables/jquery.dataTables.min.css">
 
   <script type="text/javascript" language="javascript" src="../js/jquery.js"></script>
   <script type="text/javascript" language="javascript" src="../js/jquery.dataTables.min.js"></script>
 
-	<link rel='stylesheet' type='text/css' href='../css/style.css'>
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.6/jq-2.2.3/dt-1.10.12/af-2.1.2/r-2.1.0/rr-1.1.2/datatables.min.css"/> -->
+	<script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.6/jq-2.2.3/dt-1.10.12/af-2.1.2/r-2.1.0/rr-1.1.2/datatables.min.js"></script>
 
+	<link rel='stylesheet' type='text/css' href='../css/style.min.css'>
+	
 	<!-- Favicon Code -->
 	<link rel='icon' type='image/png' sizes='32x32' href='../favicon/favicon-32x32.png'>
 	<link rel='icon' type='image/png' sizes='96x96' href='../favicon/favicon-96x96.png'>
