@@ -23,10 +23,10 @@
   <script type="text/javascript" language="javascript" src="../js/jquery.dataTables.min.js"></script>
 
 	<!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs-3.3.6/jq-2.2.3/dt-1.10.12/af-2.1.2/r-2.1.0/rr-1.1.2/datatables.min.css"/> -->
-	<script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.6/jq-2.2.3/dt-1.10.12/af-2.1.2/r-2.1.0/rr-1.1.2/datatables.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn.datatables.net/v/bs-3.3.6/jq-2.2.3/dt-1.10.12/af-2.1.2/r-2.1.0/rr-1.1.2/datatables.min.js"></script> -->
 
-	<link rel='stylesheet' type='text/css' href='../css/style.min.css'>
-	
+	<link rel='stylesheet' type='text/css' href='../css/style.css'>
+
 	<!-- Favicon Code -->
 	<link rel='icon' type='image/png' sizes='32x32' href='../favicon/favicon-32x32.png'>
 	<link rel='icon' type='image/png' sizes='96x96' href='../favicon/favicon-96x96.png'>
@@ -68,7 +68,7 @@
 								<a href='newentry.php' class='primary2-links'>new entry</a>
 							</li>
 							<li id='primary-list-item-3'>
-								<a href='views.php' class='primary2-links'>reports</a>
+								<a href='views.php' class='primary2-links'>views</a>
 							</li>
 							<li id='primary-list-item-4'>
 								<a href='https://corsair.cs.iupui.edu/phpmyadmin/' class='primary2-links'>phpmyadmin</a>

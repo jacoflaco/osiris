@@ -30,3 +30,16 @@ You will also be able to Enter data into the database with the New Entry button.
 All forms are working for Members, however, for Admin controls only the create new User is working
 If you would like to view a report, click on Reports on the top. The reports that are finished and polished are Hotels and Users
 Click on either of those buttons to view the data from the database
+
+
+TODO
+
+Add sessionVerify to all session pages and timeout to all login pages
+Create all views in the database
+Change 'Reports' to 'Views' in admin nav
+Finish all datatable pages
+Finish all new entry pages
+Figure out how to edit database info efficiently
+Update README
+Finish Reservation Form
+Finish all content

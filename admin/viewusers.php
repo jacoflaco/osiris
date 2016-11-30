@@ -7,14 +7,14 @@
 	 Modification Date: 10/18/2016
 -->
 
-<?php
+<?php session_start();
 	require_once '../00-utility/functions.php';
 	require_once '../00-utility/mail/mail.class.php';
 	require_once '../00-utility/dbconnect.php';
 
 	include '../01-modules/adminheader.php';
 
-	$query = "select * from O_VW_USER";
+	$query = "select * from O_VW_USERS";
   $result = mysqli_query($con, $query);
 
   $result_array = array();

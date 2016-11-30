@@ -7,7 +7,7 @@
 	 Modification Date: 10/18/2016
 -->
 
-<?php
+<?php session_start();
 	require_once '../00-utility/functions.php';
 
 	include '../01-modules/adminheader.php';
