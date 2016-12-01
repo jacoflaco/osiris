@@ -22,7 +22,11 @@
 
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function() {
-		var table = $('#datatables').DataTable();
+		var table = $('#datatables').DataTable({
+			"scrollY":        "500px",
+			"scrollCollapse": true,
+			"paging":         false
+		});
 	})
 </script>
 

@@ -28,6 +28,7 @@
 	color: $white
 	font: 1.2rem/1.2rem $bodytext
 	letter-spacing: 1px
+	margin-top: 25px
 	text-align: center
 
 .form-section-divs
@@ -146,6 +147,7 @@
 		color: $white
 		font: 1.1rem/1.1rem $bodytext
 
+
 /* =========================================
 	 REPORTS
    ========================================= */
@@ -174,7 +176,7 @@
 	-webkit-text-stroke: .05vw $white
 
 .report-transparent-container
-	background: rgba(255, 255, 255, 0.8)
+	background: rgba(0, 0, 0, 0.6)
 	//background: white
 	border-radius: 5px
 	margin: 0 auto
@@ -182,18 +184,24 @@
 	position: relative
 	top: 20%
 	width: 88vw
+	color: white
 
 .report-data-container
 	margin: 0 auto
 	padding: 30px
 	width: 500px
 
-//.report-datatable-container
-	//margin
 
+#registration-info-report
+	width: 100%
+
+	td
+		width: 50%
+		
 .form-field
 	color: lighten($bluegreen, 10%)
 	font: 1.1rem/1.1rem $bodytext
+	padding-bottom: 10px
 	text-align: right
 
 .form-input
@@ -202,3 +210,30 @@
 	padding-left: 20px
 	padding-bottom: 10px
 	text-align: left
+
+/***** changes to datatables css *****/
+#datatables
+	color: $white
+	font: 1.0rem/1.0rem $lighttext
+
+	tbody, tr
+		background: none
+
+table.dataTable thead th,
+table.dataTable thead td
+	border-bottom: 2px solid $bluegreen
+	font: 1.0rem/1.0rem $lighttext
+
+table.dataTable tfoot th,
+table.dataTable tfoot td
+	border-top: 2px solid $bluegreen
+	font: 1.0rem/1.0rem $lighttext
+
+table.dataTable tbody th,
+table.dataTable tbody td
+	border-top: 1px solid $darkgray
+	font: 1.0rem/1.0rem $lighttext
+	padding: 13px 0
+
+#datatables_filter label, #datatables_info
+	color: $white

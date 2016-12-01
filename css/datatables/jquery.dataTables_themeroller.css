@@ -228,7 +228,29 @@ table.dataTable td {
 }
 .dataTables_wrapper .dataTables_filter input {
   margin-left: 0.5em;
+  margin-bottom: 1rem;
+
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #008A95 4%);
+  background-position: -400px 0;
+  background-repeat: no-repeat;
+  background-size: 400px 100%;
+  border: none;
+  border-bottom: 1px solid #00a2af;
+  color: #FFF;
+  display: inline-block;
+  font: 1.2rem/1.2rem "Roboto";
+  letter-spacing: 1px;
+  padding: 12px 3px 6px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.64, 0.09, 0.08, 1);
+  width: 400px;
 }
+.dataTables_wrapper .dataTables_filter input:focus {
+  background-position: 0 0;
+  outline: none;
+}
+
+
 .dataTables_wrapper .dataTables_info {
   clear: both;
   float: left;

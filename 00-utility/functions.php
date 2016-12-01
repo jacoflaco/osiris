@@ -174,3 +174,22 @@ function validateCode($field) {
     else return false;
   }
 }
+
+// ******************** validate date *******************
+/* this function will validate if the month is between 1-12, day is between 1-31, and year is between 1895 and 2016
+*/
+function validateDate($pMonth, $pDay, $pYear) {
+  if(!is_int($pMonth)) {
+    $pMonth = (int)$pMonth;
+  }
+  if(!is_int($pDay)) {
+    $pDay = (int)$pDay;
+  }
+  if(!is_int($pYear)) {
+    $pYear = (int)$pYear;
+  }
+  if($pMonth <= 12 && $pMonth > 0 && $pDay <= 31 && $pDay > 0 && $pYear >= 1895 && $pYear <= 2016) {
+    return true;
+  }
+
+}
