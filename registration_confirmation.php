@@ -90,10 +90,10 @@
 
 								$subject = "Osiris Account Activation";
 
-								$body = "Hello $firstname.<br><br>Thank you for becoming a member of Osiris Destinations & Resorts. Your activation code is $activationcode. Please click on the following link to activate your account and login.<br><br><a href='http://corsair.cs.iupui.edu:20111/osiris/current/activation.php?activationcode=$activationcode'>Activate</a><br><br>Welcome to Osiris and have a great day!<br><br>Jake Handwork<br>Chief Exeecutive Officer<br>Osiris Destinations & Resorts";
+								$body = "Hello $firstname,<br><br>Thank you for becoming a member of Osiris Destinations & Resorts. Your activation code is $activationcode. Please click on the following link to activate your account and login.<br><br><a href='http://corsair.cs.iupui.edu:20111/osiris/current/activation.php?activationcode=$activationcode'>Activate</a><br><br>Welcome to Osiris and have a great day!<br><br>Jake Handwork<br>Chief Executive Officer<br>Osiris Destinations & Resorts";
 								$mailer = new Mail();
 								if (($mailer->sendMail($email, $firstname, $subject, $body, $headers))==true)
-									$message = "Hello $firstname.<br><br>Thank you for becoming a member of Osiris Destinations & Resorts. Your activation code is $activationcode. Please click on the following link to activate your account and login.<br><br><a href='http://corsair.cs.iupui.edu:20111/current/current/activation.php?activationcode=$activationcode'>Activate</a><br><br>Welcome to Osiris and have a great day!<br><br>Jake Handwork<br>Chief Exeecutive Officer<br>Osiris Destinations & Resorts";
+									$message = "Hello $firstname,<br><br>Thank you for becoming a member of Osiris Destinations & Resorts. Your activation code is $activationcode. Please click on the following link to activate your account and login.<br><br><a href='http://corsair.cs.iupui.edu:20111/current/current/activation.php?activationcode=$activationcode'>Activate</a><br><br>Welcome to Osiris and have a great day!<br><br>Jake Handwork<br>Chief Executive Officer<br>Osiris Destinations & Resorts";
 								else $msg = "Email not sent. " . $email.' '. $firstname.' '. $subject.' '. $body;
 
 							}

@@ -50,7 +50,7 @@
 						<td>State</td>
 						<td>Country</td>
 						<td>Admin ID</td>
-						<td>Date of Reservation</td>
+						<td>Date of Res</td>
 						<td>Price</td>
 						<td># of Rooms</td>
 						<td>Check In</td>
@@ -94,7 +94,7 @@
 						<td>State</td>
 						<td>Country</td>
 						<td>Admin ID</td>
-						<td>Date of Reservation</td>
+						<td>Date of Res</td>
 						<td>Price</td>
 						<td># of Rooms</td>
 						<td>Check In</td>
