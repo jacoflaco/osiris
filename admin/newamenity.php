@@ -19,7 +19,7 @@
 <div class="form-container">
 
 	<div id="form-wrapper">
-		<h3 class="form-header">osiris hotel registration</h3>
+		<h3 class="form-header">osiris amenity registration</h3>
 		<form method="post" action='newentryconfirmation.php' id='new-entry-form'>
 
 			<?php
@@ -27,10 +27,9 @@
 			?>
 
 			<div class="form-section-divs">
-				<input id='hotel-name' class='form-input-1-cols' placeholder="Hotel Name" type="text" name='hotelname' required="">
-				<input id='hotel-num-rooms' class='form-input-1-cols' placeholder="# of rooms" type="text" name='hotelnumrooms' required="">
+				<input id='amenity-desc' class='form-input-1-cols' placeholder="Amenity Description" type="text" name='amenity' required="">
 
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='newhotelsubmit' value='Submit'>
+				<input id='form-submit' class='form-input-1-cols' type='submit' name='newamenitysubmit' value='Submit'>
 			</div>
 
 		</form>

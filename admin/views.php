@@ -10,9 +10,8 @@
 <?php session_start();
 	require_once '../00-utility/functions.php';
 	require_once '../00-utility/dbconnect.php';
-?>
+	require_once '../00-utility/sessionVerify.php';
 
-<?php
 	include '../01-modules/adminheader.php';
 ?>
 
@@ -23,11 +22,11 @@
 
 			<div class="form-section-divs">
 
-				<a class='mainbuttons button-2-cols' href='viewadmins.php'>Admins</a>
-				<a class='mainbuttons button-2-cols' href='viewinvoices.php'>Invoices</a>
-				<a class='mainbuttons button-2-cols' href='viewhotels.php'>Hotels</a>
-				<a class='mainbuttons button-2-cols' href='viewreservations.php'>Reservations</a>
-				<a class='mainbuttons button-2-cols' href='viewusers.php'>Users</a>
+				<a class='mainbuttons button-1-cols' href='viewadmins.php'>Admins</a>
+				<a class='mainbuttons button-1-cols' href='viewinvoices.php'>Invoices</a>
+				<a class='mainbuttons button-1-cols' href='viewhotels.php'>Hotels</a>
+				<a class='mainbuttons button-1-cols' href='viewreservations.php'>Reservations</a>
+				<a class='mainbuttons button-1-cols' href='viewusers.php'>Users</a>
 
 
 			</div>

@@ -10,15 +10,8 @@
 <?php session_start();
 	require_once '../00-utility/functions.php';
 	require_once '../00-utility/dbconnect.php';
+	require_once '../00-utility/sessionVerify.php';
 
-	if(!isset($_SESSION['admin'])) {
-		session_unset();
-		session_destroy();
-		header('location: login.php');
-	}
-?>
-
-<?php
 	include '../01-modules/adminheader.php';
 ?>
 
@@ -29,9 +22,9 @@
 
 			<div class="form-section-divs">
 
-				<a class='mainbuttons button-2-cols' href='newentry.php'>New Entry</a>
-				<a class='mainbuttons button-2-cols' href='views.php'>Views</a>
-				<a class='mainbuttons button-2-cols' href='https://corsair.cs.iupui.edu/phpmyadmin/'>phpMyAdmin</a>
+				<a class='mainbuttons button-3-cols' href='newentry.php'>New Entry</a>
+				<a class='mainbuttons button-3-cols' href='views.php'>Views</a>
+				<a class='mainbuttons button-3-cols' href='https://corsair.cs.iupui.edu/phpmyadmin/'>phpMyAdmin</a>
 
 			</div>
 
