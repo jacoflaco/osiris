@@ -1193,8 +1193,18 @@ footer {
 }
 
 .form-input-3-cols {
+  margin: 0 12px;
+  width: 200px;
+}
+
+.form-input-3-min-cols {
   margin: 0 5px;
   width: 100px;
+}
+
+.form-input-5-cols {
+  margin: 0 1%;
+  width: 15%;
 }
 
 #form-submit {
@@ -1270,6 +1280,32 @@ footer {
   font: 1.1rem/1.1rem "Roboto";
 }
 
+/* ==========
+	 DROP DOWN LISTS
+	 @mixin ================= */
+/* ==========  Select Field ========== */
+/* Style Select Field */
+select {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #008A95;
+  color: #DDD;
+  font: 1.2rem/1.2rem "Roboto";
+  margin: 0 1%;
+  padding: 4px 0;
+  padding-right: 2.5%;
+  outline: 0px;
+  outline-width: 10%;
+}
+
+/* Remove focus */
+select:focus {
+  background: #1D2735;
+  border: none;
+  color: #FFF;
+  color-outline: 0px;
+}
+
 /* =========================================
 	 REPORTS
    @mixin ======================================== */
@@ -1299,7 +1335,7 @@ footer {
 }
 
 .report-transparent-container {
-  background: rgba(0, 0, 0, 0.6);
+  background: #1d2735;
   border-radius: 5px;
   margin: 0 auto;
   padding: 1vw;

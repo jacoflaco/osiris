@@ -25,7 +25,7 @@
 				<a class='mainbuttons button-2-cols' href='newamenity.php'>Amenity</a>
 				<a class='mainbuttons button-2-cols' href='newhotel.php'>Hotel</a>
 				<a class='mainbuttons button-2-cols' href='newinvoice.php'>Invoice</a>
-				<a class='mainbuttons button-2-cols' href='newpaymentdetails.php'>Payment Details</a>
+				<a class='mainbuttons button-2-cols' href='newpayment.php'>Payment Details</a>
 				<a class='mainbuttons button-2-cols' href='newreservation.php'>Reservation</a>
 				<a class='mainbuttons button-2-cols' href='newreservationdetails.php'>Reservation Details</a>
 				<a class='mainbuttons button-2-cols' href='newresort.php'>Resort</a>

@@ -43,9 +43,9 @@
 
 			<div class="form-section-divs">
 				<h4 class='form-label'>Date of Birth</h4></br>
-				<input id='register-month' class='form-input-3-cols' placeholder="Month" type="text" name='month' class='onethird' minlength='2' maxlength='2' required="">
-				<input id='register-day' class='form-input-3-cols' placeholder="Day" type="text" name='day' class='onethird' minlength='2' maxlength='2' required="">
-				<input id='register-year' class='form-input-3-cols' placeholder="Year" type="text" name='year' class='onethird' minlength='4' maxlength='4' required="">
+				<input id='register-month' class='form-input-3-min-cols' placeholder="Month" type="text" name='month' class='onethird' minlength='2' maxlength='2' required="">
+				<input id='register-day' class='form-input-3-min-cols' placeholder="Day" type="text" name='day' class='onethird' minlength='2' maxlength='2' required="">
+				<input id='register-year' class='form-input-3-min-cols' placeholder="Year" type="text" name='year' class='onethird' minlength='4' maxlength='4' required="">
 				<p class="form-clarification-message">Please enter in format: MM DD YYYY</p>
 			</div>
 
@@ -56,7 +56,7 @@
 				<input id='form-submit' class='form-input-1-cols' type='submit' name='registersubmit' value='Submit'>
 				<a href="login.php" class="after-form-links">Already Registered? Login Here</a>
 			</div>
-			
+
 		</form>
 	</div>
 

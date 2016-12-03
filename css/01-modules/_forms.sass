@@ -86,8 +86,16 @@
 		width: 300px
 
 .form-input-3-cols
+		margin: 0 12px
+		width: 200px
+
+.form-input-3-min-cols
 		margin: 0 5px
 		width: 100px
+
+.form-input-5-cols
+		margin: 0 1%
+		width: 15%
 
 #form-submit
 	background: lighten($bluegreen, 5%)
@@ -147,6 +155,30 @@
 		color: $white
 		font: 1.1rem/1.1rem $bodytext
 
+/* ==========
+	 DROP DOWN LISTS
+	 ================== */
+/* ==========  Select Field ========== */
+
+/* Style Select Field */
+select
+	background-color: transparent
+	border: none
+	border-bottom: 1px solid $bluegreen
+	color: $lightgray
+	font: 1.2rem/1.2rem $bodytext
+	margin: 0 1%
+	padding: 4px 0
+	padding-right: 2.5%
+	outline: 0px
+  width: 10%
+
+/* Remove focus */
+select:focus
+	background: $darkblue
+	border: none
+	color: $white
+  outline: 0px
 
 /* =========================================
 	 REPORTS
@@ -176,7 +208,7 @@
 	-webkit-text-stroke: .05vw $white
 
 .report-transparent-container
-	background: rgba(0, 0, 0, 0.6)
+	background: rgba(29, 39, 53, 1)
 	//background: white
 	border-radius: 5px
 	margin: 0 auto

@@ -212,12 +212,8 @@
 				$reservationid = trim($_POST['reservationid']);
 				$reservationid = mysqli_real_escape_string($con, $reservationid);
 
-
-				//VERIFY THAT RESERVATIONID IS NOT CURRENTLY INVOICED
-
-
 				//store reservation user id in a variable to access user info
-				$getuser = mysqli_query($con, "select UserID from O_RESERVATION where ReservationID = $reservationid") or die("<p class='form-error'>Could not select the data: ".mysql_error()."</p>");
+				$getuser = mysqli_query($con, "select UserID from O_RESERVATION where ReservationID = $reservationid AND IsInvoiced = 0") or die("<p class='form-error'>Could not select the data: ".mysql_error()."</p>");
 				$useridarray = mysqli_fetch_array($getuser);
 				$userid = $useridarray[0];
 
@@ -231,7 +227,7 @@
 				$useremail = $userarray['Email'];
 
 				//store the reservation as an invoice with today being the day of invoice
-				$sql = "insert into O_INVOICE values(null, '".$reservationid."', now())";
+				$sql = "insert into O_INVOICE values(null, '".$reservationid."', now(), 0)";
 				$query = mysqli_query($con, $sql);
 
 				//if couldn't insert, print error
@@ -317,6 +313,77 @@
 									If you are having any problems with paying online, please call us at 1-800-(674)-7470. We hope you enjoyed your time with us at Osiris Destinations & Resorts
 									<br><br>Jake Handwork<br>Chief Executive Officer<br>Osiris Destinations & Resorts";
 				else $msg = "Email not sent. " . $useremail.' '. $userfirst.' '. $subject.' '. $body;
+			}
+
+
+			/* * * * * * *
+				PAYMENT PAYMENT PAYMENT PAYMENT PAYMENT PAYMENT PAYMENT * * * * * *
+			 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+			//if new payment is created
+			else if(isset($_POST['newpaymentsubmit'])) {
+				$invoiceid = trim($_POST['invoiceid']);
+				$creditcard = trim($_POST['creditcard']);
+				$securitycode = trim($_POST['securitycode']);
+				$expmonth = trim($_POST['expmonth']);
+				$expyear = trim($_POST['expyear']);
+				$streetnumber = trim($_POST['streetnumber']);
+				$streetname = trim($_POST['streetname']);
+				$city = trim($_POST['city']);
+				$state = trim($_POST['state']);
+				$zipcode = trim($_POST['zipcode']);
+
+				$invoiceid = mysqli_real_escape_string($con, $invoiceid);
+				$creditcard = mysqli_real_escape_string($con, $creditcard);
+				$securitycode = mysqli_real_escape_string($con, $securitycode);
+				$expmonth = mysqli_real_escape_string($con, $expmonth);
+				$expyear = mysqli_real_escape_string($con, $expyear);
+				$streetnumber = mysqli_real_escape_string($con, $streetnumber);
+				$streetname = mysqli_real_escape_string($con, $streetname);
+				$city = mysqli_real_escape_string($con, $city);
+				$state = mysqli_real_escape_string($con, $state);
+				$zipcode = mysqli_real_escape_string($con, $zipcode);
+
+				$sql = "insert into O_PAYMENT_DETAILS values(null, '".$invoiceid."', '".$creditcard."', '".$securitycode."', '".$expmonth."', '".$expyear."', '".$streetnumber."', '".$streetname."', '".$city."', '".$state."', '".$zipcode."')";
+				$query = mysqli_query($con, $sql);
+
+				//if couldn't insert, print error
+				if(!$query) {
+					die("<p class='form-error'>Could not enter data: " . mysql_error() . "</p>");
+				}
+				else {
+					print "<p class='form-message'>The following hotel has been registered in the database.</p>";
+					print "
+						<div class='report-data-container'>
+							<table id='registration-info-report'>
+								<tr>
+									<td class='form-field'>Invoice ID: </td>
+									<td class='form-input'>$invoiceid</td></tr>
+								<tr>
+									<td class='form-field'>Credit Card Number: </td>
+									<td class='form-input'>$creditcard</td></tr>
+								<tr>
+									<td class='form-field'>Security Code: </td>
+									<td class='form-input'>$securitycode</td></tr>
+								<tr>
+									<td class='form-field'>Expiration Date: </td>
+									<td class='form-input'>$expmonth/$expyear</td></tr>
+								<tr>
+									<td class='form-field'>Street Address: </td>
+									<td class='form-input'>$streetnumber $streetname</td></tr>
+								<tr>
+									<td class='form-field'></td>
+									<td class='form-input'>$city, $state, $zipcode</td></tr>
+							</table>
+						</div>";
+				}
+
+				//update O_INVOICE to show paid
+				$updateToPaid = "update O_INVOICE set ispaid = b'1' where invoiceid = '$invoiceid'";
+				$check = mysqli_query($con, $updateToPaid);
+				if(!$check) {
+					die("<p class='form-error'>Could not update: " . mysql_error() . "</p>");
+				}
 			}
 
 			else {
