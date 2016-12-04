@@ -16,11 +16,10 @@
 
 <div class="form-container">
 	<div id="form-wrapper">
-		<h3 class="form-header">osiris new data</h3>
+		<h3 class="form-header">create data</h3>
 
 
 			<div class="form-section-divs">
-
 				<a class='mainbuttons button-2-cols' href='newadmin.php'>Admin</a>
 				<a class='mainbuttons button-2-cols' href='newamenity.php'>Amenity</a>
 				<a class='mainbuttons button-2-cols' href='newhotel.php'>Hotel</a>
@@ -28,14 +27,7 @@
 				<a class='mainbuttons button-2-cols' href='newpayment.php'>Payment Details</a>
 				<a class='mainbuttons button-2-cols' href='newreservation.php'>Reservation</a>
 				<a class='mainbuttons button-2-cols' href='newresort.php'>Resort</a>
-				<a class='mainbuttons button-2-cols' href='newresorthotels.php'>Resort Hotel</a>
-				<a class='mainbuttons button-2-cols' href='newroom.php'>Room</a>
-				<a class='mainbuttons button-2-cols' href='newroomamenities.php'>Room Amenity</a>
-				<a class='mainbuttons button-2-cols' href='newroomtype.php'>Room Type</a>
-				<a class='mainbuttons button-2-cols' href='newroomtypequantities.php'>Room Type Quantities</a>
 				<a class='mainbuttons button-2-cols' href='newuser.php'>User</a>
-
-
 			</div>
 
 

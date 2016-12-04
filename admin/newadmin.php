@@ -19,7 +19,7 @@
 <div class="form-container">
 
 	<div id="form-wrapper">
-		<h3 class="form-header">osiris admin registration</h3>
+		<h3 class="form-header">create admin</h3>
 		<form method="post" action='newentryconfirmation.php' id='new-entry-form'>
 
 			<?php

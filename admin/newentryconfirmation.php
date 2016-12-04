@@ -156,13 +156,21 @@
 			//if new hotel is created
 			else if(isset($_POST['newhotelsubmit'])) {
 				$hotelname = trim($_POST['hotelname']);
-				$hotelnumrooms = trim($_POST['hotelnumrooms']);
+				// $hotelnumrooms = trim($_POST['hotelnumrooms']);
 
 				$hotelname = mysqli_real_escape_string($con, $hotelname);
-				$hotelnumrooms = mysqli_real_escape_string($con, $hotelnumrooms);
+				// $hotelnumrooms = mysqli_real_escape_string($con, $hotelnumrooms);
 
-				$sql = "insert into O_HOTEL values(null, '".$hotelname."', '".$hotelnumrooms."')";
+				// $penthouse = 1;
+				// $luxxe = 2;
+				// if((($hotelnumrooms-3)/2)%2 === true) {
+				// 	$villas = (($hotelnumrooms-3) / 2) + 1;
+				// } else {
+				// 	$villas = (($hotelnumrooms-3) / 2) + 2;
+				// }
+				// $suites = $hotelnumrooms - 3 - ($villas * 2);
 
+				$sql = "insert into O_HOTEL values(null, '".$hotelname."', '15')";
 				$query = mysqli_query($con, $sql);
 
 				//if couldn't insert, print error
@@ -179,7 +187,7 @@
 									<td class='form-input'>$hotelname</td></tr>
 								<tr>
 									<td class='form-field'>Number of Rooms: </td>
-									<td class='form-input'>$hotelnumrooms</td></tr>
+									<td class='form-input'>15</td></tr>
 							</table>
 						</div>";
 				}
@@ -202,6 +210,155 @@
 
 					if(!$query2) {
 						die("<p class='form-error'>Could not enter data: " . mysql_error() . "</p>");
+					}
+				}
+
+				/*****
+					Create data for Rooms
+					****************************/
+				$getresorthotel = mysqli_query($con, "select ResortHotelID from O_RESORT_HOTEL where HotelID = '".$hotelid."'");
+				$resorthotelids = Array();
+				while ($row = mysqli_fetch_array($getresorthotel)) {
+				  $resorthotelids[] = $row[0];
+				}
+				$getamenity = mysqli_query($con, "select AmenityID from O_AMENITY");
+				$amenityids = Array();
+				while ($row = mysqli_fetch_array($getamenity)) {
+				  $amenityids[] = $row[0];
+				}
+
+				for($i = 0; $i < sizeof($resorthotelids); $i++) {
+					$resorthotelid = $resorthotelids[$i];
+					//room type 1
+					for($i = 0; $i < 4; $i++) {
+						$sql3 = "insert into O_ROOM values(null, '".$resorthotelid."', '1', '".$i."', '0')";
+						$query3 = mysqli_query($con, $sql3);
+						if(!$query3) {
+							die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						}
+						//store the last inserted id as the roomid
+						$getroomid = mysqli_query($con, "select LAST_INSERT_ID()") or die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						$roomidarray = mysqli_fetch_array($getroomid);
+						$roomid = $roomidarray[0];
+						//amenities
+						for($j = 0; $j < sizeof($amenityids); $j++) {
+							$amenityid = $amenityids[$j];
+							$sql31 = "insert into O_ROOM_AMENITY values(null, '".$roomid."', '".$amenityid."')";
+							$query31 = mysqli_query($con, $sql31);
+							if(!$query31) {
+								die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+							}
+						}
+					}
+
+					//room type 2
+					for($i = 0; $i < 4; $i++) {
+						$sql4 = "insert into O_ROOM values(null, '".$resorthotelid."', '2', '".$i."', '0')";
+						$query4 = mysqli_query($con, $sql4);
+						if(!$query4) {
+							die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						}
+						//store the last inserted id as the roomid
+						$getroomid = mysqli_query($con, "select LAST_INSERT_ID()") or die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						$roomidarray = mysqli_fetch_array($getroomid);
+						$roomid = $roomidarray[0];
+						//amenities
+						for($j = 0; $j < sizeof($amenityids); $j++) {
+							$amenityid = $amenityids[$j];
+							$sql41 = "insert into O_ROOM_AMENITY values(null, '".$roomid."', '".$amenityid."')";
+							$query41 = mysqli_query($con, $sql41);
+							if(!$query41) {
+								die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+							}
+						}
+					}
+
+					//room type 3
+					for($i = 0; $i < 2; $i++) {
+						$sql5 = "insert into O_ROOM values(null, '".$resorthotelid."', '3', '".$i."', '0')";
+						$query5 = mysqli_query($con, $sql5);
+						if(!$query5) {
+							die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						}
+						//store the last inserted id as the roomid
+						$getroomid = mysqli_query($con, "select LAST_INSERT_ID()") or die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						$roomidarray = mysqli_fetch_array($getroomid);
+						$roomid = $roomidarray[0];
+						//amenities
+						for($j = 0; $j < sizeof($amenityids); $j++) {
+							$amenityid = $amenityids[$j];
+							$sql51 = "insert into O_ROOM_AMENITY values(null, '".$roomid."', '".$amenityid."')";
+							$query51 = mysqli_query($con, $sql51);
+							if(!$query51) {
+								die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+							}
+						}
+					}
+
+					//room type 4
+					for($i = 0; $i < 2; $i++) {
+						$sql6 = "insert into O_ROOM values(null, '".$resorthotelid."', '4', '".$i."', '0')";
+						$query6 = mysqli_query($con, $sql6);
+						if(!$query6) {
+							die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						}
+						//store the last inserted id as the roomid
+						$getroomid = mysqli_query($con, "select LAST_INSERT_ID()") or die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						$roomidarray = mysqli_fetch_array($getroomid);
+						$roomid = $roomidarray[0];
+						//amenities
+						for($j = 0; $j < sizeof($amenityids); $j++) {
+							$amenityid = $amenityids[$j];
+							$sql61 = "insert into O_ROOM_AMENITY values(null, '".$roomid."', '".$amenityid."')";
+							$query61 = mysqli_query($con, $sql61);
+							if(!$query61) {
+								die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+							}
+						}
+					}
+
+					//room type 5
+					for($i = 0; $i < 2; $i++) {
+						$sql7 = "insert into O_ROOM values(null, '".$resorthotelid."', '5', '".$i."', '0')";
+						$query7 = mysqli_query($con, $sql7);
+						if(!$query7) {
+							die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						}
+						//store the last inserted id as the roomid
+						$getroomid = mysqli_query($con, "select LAST_INSERT_ID()") or die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						$roomidarray = mysqli_fetch_array($getroomid);
+						$roomid = $roomidarray[0];
+						//amenities
+						for($j = 0; $j < sizeof($amenityids); $j++) {
+							$amenityid = $amenityids[$j];
+							$sql71 = "insert into O_ROOM_AMENITY values(null, '".$roomid."', '".$amenityid."')";
+							$query71 = mysqli_query($con, $sql71);
+							if(!$query71) {
+								die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+							}
+						}
+					}
+
+					//room type 6
+					for($i = 0; $i < 1; $i++) {
+						$sql8 = "insert into O_ROOM values(null, '".$resorthotelid."', '6', '".$i."', '0')";
+						$query8 = mysqli_query($con, $sql8);
+						if(!$query8) {
+							die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						}
+						//store the last inserted id as the roomid
+						$getroomid = mysqli_query($con, "select LAST_INSERT_ID()") or die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						$roomidarray = mysqli_fetch_array($getroomid);
+						$roomid = $roomidarray[0];
+						//amenities
+						for($j = 0; $j < sizeof($amenityids); $j++) {
+							$amenityid = $amenityids[$j];
+							$sql81 = "insert into O_ROOM_AMENITY values(null, '".$roomid."', '".$amenityid."')";
+							$query81 = mysqli_query($con, $sql81);
+							if(!$query81) {
+								die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+							}
+						}
 					}
 				}
 			}
@@ -261,6 +418,18 @@
 				$check = mysqli_query($con, $updateToInvoiced);
 				if(!$check) {
 					die("<p class='form-error'>Could not update: " . mysql_error() . "</p>");
+				}
+
+				//store roomid from O_ROOM in a variable
+				$getroom = mysqli_query($con, "select RoomID from O_RESERVATION where ReservationID = $reservationid") or die("<p class='form-error'>Could not select the data: ".mysql_error()."</p>");
+				$roomidarray = mysqli_fetch_array($getroom);
+				$roomid = $roomidarray[0];
+
+				//update O_ROOM to not be reserved
+				$updateToNotReserved = "update O_ROOM set isreserved = b'0' where roomid = '$roomid'";
+				$check = mysqli_query($con, $updateToNotReserved);
+				if(!$check) {
+					die("<p class='form-error'>Could not update: " . mysqli_error($con) . "</p>");
 				}
 
 				//store reservation info to send invoice through email
@@ -488,27 +657,21 @@
 				//store current admins id in local variable
 				$currentadminid = $_SESSION['admin']['AdminID'];
 				//store the reservation info
-				$sql1 = "insert into O_RESERVATION values(null, '".$userid."', '".$roomid."', '".$currentadminid."', now(), '".$price."', 0)";
+				$sql1 = "insert into O_RESERVATION values(null, '".$userid."', '".$roomid."', '".$currentadminid."', NOW(), '".$price."', 0)";
 				$query1 = mysqli_query($con, $sql1);
 				//if couldn't insert, print error
 				if(!$query1) {
 					die("<p class='form-error'>Could not enter data1: " . mysqli_error($con) . "</p>");
 				}
 
-				$todaystime = getdate();
-				$todaysdate = $todaystime['year']."-".$todaystime['mday']."-".$todaystime['mon'];
-				//get the reservationid of this reservation
-				$getreservationid = mysqli_query($con, "select ReservationID from O_RESERVATION where UserID = $userid AND RoomID = $roomid AND DateOfReservation = '".$todaysdate."'") or die("<p class='form-error'>Could not select the data7: ".mysqli_error($con)."</p>");
-				$reservationarray = mysqli_fetch_array($getreservationid);
-				$reservationid = $reservationarray[0];
 				//store the reservation details
-				// $sql2 = "insert into O_RESERVATION_DETAILS values(null, '".$reservationid."', '".$numberofrooms."', '".$checkin."', '".$checkout."')";
-				// $query2 = mysqli_query($con, $sql2);
-				// //if couldn't insert, print error
-				// if(!$query2) {
-				// 	die("<p class='form-error'>$reservationid Could not enter data2: " . mysqli_error($con) . "</p>");
-				// }
-				// else {
+				$sql2 = "insert into O_RESERVATION_DETAILS values(null, LAST_INSERT_ID(), '".$numberofrooms."', '".$checkin."', '".$checkout."')";
+				$query2 = mysqli_query($con, $sql2);
+				//if couldn't insert, print error
+				if(!$query2) {
+					die("<p class='form-error'>Could not enter data2: " . mysqli_error($con) . "</p>");
+				}
+				else {
 					print "<p class='form-message'>The following reservation has been created and emailed to the user.</p>";
 					print "
 						<div class='report-data-container'>
@@ -544,67 +707,289 @@
 									<td class='form-field'>Nights:</td>
 									<td class='form-input'>$nights</td></tr>
 								<tr>
-									<td class='form-field'>Reservation ID:</td>
-									<td class='form-input'>$todaysdate / $reservationid</td></tr>
-								<tr>
 									<td class='form-field'>Price:</td>
 									<td class='form-input'>$$price</td></tr>
 							</table>
 						</div>";
-				// }
-				//
-				// //used to be able to stylize link in email
-				// $headers  = 'MIME-Version: 1.0' . "\r\n";
-				// $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-				//
-				// $subject = "Osiris Reservation";
-				//
-				// $body = "Hello $userfirst,<br><br>Thank you for reserving your stay at Osiris Destinations & Resorts.
-				// 				We are excited to have you here and we hope that you enjoy your stay.
-				// 				Here is the information from your reservation.<br><br>
-				// 				<table>
-				// 					<tr>
-				// 						<td style='padding-right:15px; border-right: 1px solid black;'>First Name: </td>
-				// 						<td style='padding-left:15px;'>$firstname</td></tr>
-				// 					<tr>
-				// 						<td style='padding-right:15px; border-right: 1px solid black;'>Last Name: </td>
-				// 						<td style='padding-left:15px;'>$lastname</td></tr>
-				// 					<tr>
-				// 						<td style='padding-right:15px; border-right: 1px solid black;'>Email: </td>
-				// 						<td style='padding-left:15px;'>$email</td></tr>
-				// 					<tr>
-				// 						<td style='padding-right:15px; border-right: 1px solid black;'>Accomodations: </td>
-				// 						<td style='padding-left:15px;'>$roomtype</td></tr>
-				// 					<tr>
-				// 						<td style='padding-right:15px; border-right: 1px solid black;'>Hotel: </td>
-				// 						<td style='padding-left:15px;'>$hotelname</td></tr>
-				// 					<tr>
-				// 						<td style='padding-right:15px; border-right: 1px solid black;'>Resort:</td>
-				// 						<td style='padding-left:15px;'>".$resortarray['City'].", ".$resortarray['State'].", ".$resortarray['Country']."</td></tr>
-				// 					<tr>
-				// 						<td style='padding-right:15px; border-right: 1px solid black;'>Number Of Rooms:</td>
-				// 						<td style='padding-left:15px;'>$numberofrooms</td></tr>
-				// 					<tr>
-				// 						<td style='padding-right:15px; border-right: 1px solid black;'>Check In:</td>
-				// 						<td style='padding-left:15px;'>$checkin</td></tr>
-				// 					<tr>
-				// 						<td style='padding-right:15px; border-right: 1px solid black;'>Check Out:</td>
-				// 						<td style='padding-left:15px;'>$checkout</td></tr>
-				// 					<tr>
-				// 						<td style='padding-right:15px; border-right: 1px solid black;'>Nights:</td>
-				// 						<td style='padding-left:15px;'>$nights</td></tr>
-				// 					<tr>
-				// 						<td style='padding-right:15px; border-right: 1px solid black;'>Price:</td>
-				// 						<td style='padding-left:15px;'>$$price</td></tr>
-				// 				</table>
-				// 				<br><br>
-				// 				If you have any questions, please call us at 1-800-(674)-7470. We look forward to seeing your soon!
-				// 				<br><br>Jake Handwork<br>Chief Executive Officer<br>Osiris Destinations & Resorts";
-				// $mailer = new Mail();
-				// if (($mailer->sendMail($email, $firstname, $subject, $body, $headers))==true)
-				// 	$message = "Hi";
-				// else $msg = "Email not sent. " . $email.' '. $firstname.' '. $subject.' '. $body;
+				}
+
+				//update O_ROOM to say IsReserved
+				$updateToReserved = "update O_ROOM set isreserved = b'1' where roomid = '$roomid'";
+				$check = mysqli_query($con, $updateToReserved);
+				if(!$check) {
+					die("<p class='form-error'>Could not update: " . mysqli_error($con) . "</p>");
+				}
+
+				//used to be able to stylize link in email
+				$headers  = 'MIME-Version: 1.0' . "\r\n";
+				$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+				$subject = "Osiris Reservation";
+
+				$body = "Hello $firstname,<br><br>Thank you for reserving your stay at Osiris Destinations & Resorts.
+								We are excited to have you here and we hope that you enjoy your time with us.
+								Here is the information from your reservation.<br><br>
+								<table>
+									<tr>
+										<td style='padding-right:15px; border-right: 1px solid black;'>First Name: </td>
+										<td style='padding-left:15px;'>$firstname</td></tr>
+									<tr>
+										<td style='padding-right:15px; border-right: 1px solid black;'>Last Name: </td>
+										<td style='padding-left:15px;'>$lastname</td></tr>
+									<tr>
+										<td style='padding-right:15px; border-right: 1px solid black;'>Email: </td>
+										<td style='padding-left:15px;'>$email</td></tr>
+									<tr>
+										<td style='padding-right:15px; border-right: 1px solid black;'>Accomodations: </td>
+										<td style='padding-left:15px;'>$roomtype</td></tr>
+									<tr>
+										<td style='padding-right:15px; border-right: 1px solid black;'>Hotel: </td>
+										<td style='padding-left:15px;'>$hotelname</td></tr>
+									<tr>
+										<td style='padding-right:15px; border-right: 1px solid black;'>Resort:</td>
+										<td style='padding-left:15px;'>".$resortarray['City'].", ".$resortarray['State'].", ".$resortarray['Country']."</td></tr>
+									<tr>
+										<td style='padding-right:15px; border-right: 1px solid black;'>Number Of Rooms:</td>
+										<td style='padding-left:15px;'>$numberofrooms</td></tr>
+									<tr>
+										<td style='padding-right:15px; border-right: 1px solid black;'>Check In:</td>
+										<td style='padding-left:15px;'>$checkin</td></tr>
+									<tr>
+										<td style='padding-right:15px; border-right: 1px solid black;'>Check Out:</td>
+										<td style='padding-left:15px;'>$checkout</td></tr>
+									<tr>
+										<td style='padding-right:15px; border-right: 1px solid black;'>Nights:</td>
+										<td style='padding-left:15px;'>$nights</td></tr>
+									<tr>
+										<td style='padding-right:15px; border-right: 1px solid black;'>Price:</td>
+										<td style='padding-left:15px;'>$$price</td></tr>
+								</table>
+								<br><br>
+								If you have any questions, please call us at 1-800-(674)-7470. We look forward to seeing your soon!
+								<br><br>Jake Handwork<br>Chief Executive Officer<br>Osiris Destinations & Resorts";
+				$mailer = new Mail();
+				if (($mailer->sendMail($email, $firstname, $subject, $body, $headers))==true)
+					$message = "Hi";
+				else $msg = "Email not sent. " . $email.' '. $firstname.' '. $subject.' '. $body;
 			}
+
+
+			/* * * * * * *
+				RESORT RESORT RESORT RESORT RESORT RESORT RESORT * * * * * *
+			 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+			//if new resort is created
+			else if(isset($_POST['newresortsubmit'])) {
+				$streetnumber = trim($_POST['streetnumber']);
+				$streetname = trim($_POST['streetname']);
+				$city = trim($_POST['city']);
+				$state = trim($_POST['state']);
+				$country = trim($_POST['country']);
+				$zipcode = trim($_POST['zipcode']);
+
+				$streetnumber = mysqli_real_escape_string($con, $streetnumber);
+				$streetname = mysqli_real_escape_string($con, $streetname);
+				$city = mysqli_real_escape_string($con, $city);
+				$state = mysqli_real_escape_string($con, $state);
+				$country = mysqli_real_escape_string($con, $country);
+				$zipcode = mysqli_real_escape_string($con, $zipcode);
+
+				$sql = "insert into O_RESORT values(null, '".$streetnumber."', '".$streetname."', '".$city."', '".$state."', '".$country."', '".$zipcode."')";
+				$query = mysqli_query($con, $sql);
+
+				//if couldn't insert, print error
+				if(!$query) {
+					die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+				}
+				else {
+					print "<p class='form-message'>The following resort has been registered in the database.</p>";
+					print "
+						<div class='report-data-container'>
+							<table id='registration-info-report'>
+								<tr>
+									<td class='form-field'>Resort Address: </td>
+									<td class='form-input'>$streetnumber $streetname<br>$city, $state, $zipcode<br>$country</td></tr>
+							</table>
+						</div>";
+				}
+
+				//get resortID and put it in the O_RESORT_HOTEL table
+				$getresort = mysqli_query($con, "select LAST_INSERT_ID()") or die(mysql_error());
+				$resortidarray = mysqli_fetch_array($getresort);
+				$resortid = $resortidarray[0];
+
+				//put all hotel ids into an array
+				$gethotel = mysqli_query($con, "select HotelID from O_HOTEL");
+				$hotelids = Array();
+				while ($row = mysqli_fetch_array($gethotel)) {
+				  $hotelids[] = $row[0];
+				}
+
+				//store information in O_RESORT_HOTEL
+				for($i = 0; $i < sizeof($hotelids); $i++) {
+					$hotelid = $hotelids[$i];
+					$sql2 = "insert into O_RESORT_HOTEL values(null, '".$resortid."', '".$hotelid."')";
+					$query2 = mysqli_query($con, $sql2);
+
+					if(!$query2) {
+						die("<p class='form-error'>Could not enter data: " . mysql_error() . "</p>");
+					}
+				}
+
+				/*****
+					Create data for Rooms
+					****************************/
+				$getresorthotel = mysqli_query($con, "select ResortHotelID from O_RESORT_HOTEL where ResortID = '".$resortid."'");
+				$resorthotelids = Array();
+				while ($row = mysqli_fetch_array($getresorthotel)) {
+				  $resorthotelids[] = $row[0];
+				}
+				$getamenity = mysqli_query($con, "select AmenityID from O_AMENITY");
+				$amenityids = Array();
+				while ($row = mysqli_fetch_array($getamenity)) {
+				  $amenityids[] = $row[0];
+				}
+
+				for($i = 0; $i < sizeof($resorthotelids); $i++) {
+					$resorthotelid = $resorthotelids[$i];
+					//room type 1
+					for($i = 0; $i < 4; $i++) {
+						$sql3 = "insert into O_ROOM values(null, '".$resorthotelid."', '1', '".$i."', '0')";
+						$query3 = mysqli_query($con, $sql3);
+						if(!$query3) {
+							die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						}
+						//store the last inserted id as the roomid
+						$getroomid = mysqli_query($con, "select LAST_INSERT_ID()") or die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						$roomidarray = mysqli_fetch_array($getroomid);
+						$roomid = $roomidarray[0];
+						//amenities
+						for($j = 0; $j < sizeof($amenityids); $j++) {
+							$amenityid = $amenityids[$j];
+							$sql31 = "insert into O_ROOM_AMENITY values(null, '".$roomid."', '".$amenityid."')";
+							$query31 = mysqli_query($con, $sql31);
+							if(!$query31) {
+								die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+							}
+						}
+					}
+
+					//room type 2
+					for($i = 0; $i < 4; $i++) {
+						$sql4 = "insert into O_ROOM values(null, '".$resorthotelid."', '2', '".$i."', '0')";
+						$query4 = mysqli_query($con, $sql4);
+						if(!$query4) {
+							die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						}
+						//store the last inserted id as the roomid
+						$getroomid = mysqli_query($con, "select LAST_INSERT_ID()") or die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						$roomidarray = mysqli_fetch_array($getroomid);
+						$roomid = $roomidarray[0];
+						//amenities
+						for($j = 0; $j < sizeof($amenityids); $j++) {
+							$amenityid = $amenityids[$j];
+							$sql41 = "insert into O_ROOM_AMENITY values(null, '".$roomid."', '".$amenityid."')";
+							$query41 = mysqli_query($con, $sql41);
+							if(!$query41) {
+								die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+							}
+						}
+					}
+
+					//room type 3
+					for($i = 0; $i < 2; $i++) {
+						$sql5 = "insert into O_ROOM values(null, '".$resorthotelid."', '3', '".$i."', '0')";
+						$query5 = mysqli_query($con, $sql5);
+						if(!$query5) {
+							die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						}
+						//store the last inserted id as the roomid
+						$getroomid = mysqli_query($con, "select LAST_INSERT_ID()") or die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						$roomidarray = mysqli_fetch_array($getroomid);
+						$roomid = $roomidarray[0];
+						//amenities
+						for($j = 0; $j < sizeof($amenityids); $j++) {
+							$amenityid = $amenityids[$j];
+							$sql51 = "insert into O_ROOM_AMENITY values(null, '".$roomid."', '".$amenityid."')";
+							$query51 = mysqli_query($con, $sql51);
+							if(!$query51) {
+								die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+							}
+						}
+					}
+
+					//room type 4
+					for($i = 0; $i < 2; $i++) {
+						$sql6 = "insert into O_ROOM values(null, '".$resorthotelid."', '4', '".$i."', '0')";
+						$query6 = mysqli_query($con, $sql6);
+						if(!$query6) {
+							die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						}
+						//store the last inserted id as the roomid
+						$getroomid = mysqli_query($con, "select LAST_INSERT_ID()") or die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						$roomidarray = mysqli_fetch_array($getroomid);
+						$roomid = $roomidarray[0];
+						//amenities
+						for($j = 0; $j < sizeof($amenityids); $j++) {
+							$amenityid = $amenityids[$j];
+							$sql61 = "insert into O_ROOM_AMENITY values(null, '".$roomid."', '".$amenityid."')";
+							$query61 = mysqli_query($con, $sql61);
+							if(!$query61) {
+								die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+							}
+						}
+					}
+
+					//room type 5
+					for($i = 0; $i < 2; $i++) {
+						$sql7 = "insert into O_ROOM values(null, '".$resorthotelid."', '5', '".$i."', '0')";
+						$query7 = mysqli_query($con, $sql7);
+						if(!$query7) {
+							die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						}
+						//store the last inserted id as the roomid
+						$getroomid = mysqli_query($con, "select LAST_INSERT_ID()") or die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						$roomidarray = mysqli_fetch_array($getroomid);
+						$roomid = $roomidarray[0];
+						//amenities
+						for($j = 0; $j < sizeof($amenityids); $j++) {
+							$amenityid = $amenityids[$j];
+							$sql71 = "insert into O_ROOM_AMENITY values(null, '".$roomid."', '".$amenityid."')";
+							$query71 = mysqli_query($con, $sql71);
+							if(!$query71) {
+								die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+							}
+						}
+					}
+
+					//room type 6
+					for($i = 0; $i < 1; $i++) {
+						$sql8 = "insert into O_ROOM values(null, '".$resorthotelid."', '6', '".$i."', '0')";
+						$query8 = mysqli_query($con, $sql8);
+						if(!$query8) {
+							die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						}
+						//store the last inserted id as the roomid
+						$getroomid = mysqli_query($con, "select LAST_INSERT_ID()") or die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+						$roomidarray = mysqli_fetch_array($getroomid);
+						$roomid = $roomidarray[0];
+						//amenities
+						for($j = 0; $j < sizeof($amenityids); $j++) {
+							$amenityid = $amenityids[$j];
+							$sql81 = "insert into O_ROOM_AMENITY values(null, '".$roomid."', '".$amenityid."')";
+							$query81 = mysqli_query($con, $sql81);
+							if(!$query81) {
+								die("<p class='form-error'>Could not enter data: " . mysqli_error($con) . "</p>");
+							}
+						}
+					}
+				}
+			}
+
+
+			/******************
+				Create new hotel, would add amount of rooms to table O_ROOM
+			***********************************************************************/
 
 			else {
 				header("location: newentry.php");
