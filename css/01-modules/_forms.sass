@@ -79,15 +79,15 @@
 
 .form-input-1-cols
 		margin: 0 25px
-		width: 300px
+		width: 20%
 
 .form-input-2-cols
 		margin: 0 25px
-		width: 300px
+		width: 20%
 
 .form-input-3-cols
 		margin: 0 12px
-		width: 200px
+		width: 20%
 
 .form-input-3-min-cols
 		margin: 0 5px
@@ -180,6 +180,65 @@ select:focus
 	color: $white
   outline: 0px
 
+/* ==========
+	 CHECKBOXES
+	 ================== */
+
+/* basic styling */
+.form-checkboxes-1-cols
+	margin-right: 15px
+	margin-bottom: 25px
+	width: auto
+
+.amenity-checkbox-label
+	color: $white
+	font: 1.2rem/1.2rem $bodytext
+	margin-right: 30px
+	vertical-align: middle
+
+/* animation styling */
+.amenity-checkboxes
+  position: relative
+  margin: 1rem 1.5rem 0 0
+  cursor: pointer
+
+.amenity-checkboxes:before
+  -webkit-transition: all 0.3s ease-in-out
+  -moz-transition: all 0.3s ease-in-out
+  transition: all 0.3s ease-in-out
+  content: ""
+  position: absolute
+  left: 0
+  z-index: 1
+  width: 1.3rem
+  height: 1.3rem
+  border: 2px solid $white
+
+.amenity-checkboxes:checked + label
+   color: lighten($bluegreen, 15%)
+
+.amenity-checkboxes:checked:before
+  -webkit-transform: rotate(-45deg)
+  -moz-transform: rotate(-45deg)
+  -ms-transform: rotate(-45deg)
+  -o-transform: rotate(-45deg)
+  transform: rotate(-45deg)
+ 	height: .65rem
+  border-color: lighten($bluegreen, 15%)
+  border-top-style: none
+  border-right-style: none
+
+.amenity-checkboxes:after
+  content: ""
+  position: absolute
+  //top: -0.125rem
+  left: 0
+  width: 1.6rem
+  height: 1.6rem
+  background: $darkblue
+  cursor: pointer
+
+
 /* =========================================
 	 REPORTS
    ========================================= */
@@ -208,7 +267,7 @@ select:focus
 	-webkit-text-stroke: .05vw $white
 
 .report-transparent-container
-	background: rgba(29, 39, 53, 1)
+	background: rgba(29, 39, 53, .8)
 	//background: white
 	border-radius: 5px
 	margin: 0 auto

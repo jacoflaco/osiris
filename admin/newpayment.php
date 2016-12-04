@@ -102,7 +102,7 @@
 				<input id='street-name' class='form-input-5-cols' placeholder="Street Name" type="text" name='streetname' required="">
 				<input id='city' class='form-input-5-cols' placeholder="City" type="text" name='city' required="">
 				<select class='form-dropdown-material form-select-5-cols' name='state' required>
-					<option value='' disabled selected>Choose A State</option>
+					<option value='' disabled selected>State</option>
 					<option value="AL">Alabama</option>	<option value="AK">Alaska</option> <option value="AS">American Samoa</option> <option value="AZ">Arizona</option>
 					<option value="AR">Arkansas</option> <option value="CA">California</option>	<option value="CO">Colorado</option>
 					<option value="CT">Connecticut</option>	<option value="DE">Delaware</option> <option value="DC">District Of Columbia</option>

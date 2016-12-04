@@ -1184,17 +1184,17 @@ footer {
 
 .form-input-1-cols {
   margin: 0 25px;
-  width: 300px;
+  width: 20%;
 }
 
 .form-input-2-cols {
   margin: 0 25px;
-  width: 300px;
+  width: 20%;
 }
 
 .form-input-3-cols {
   margin: 0 12px;
-  width: 200px;
+  width: 20%;
 }
 
 .form-input-3-min-cols {
@@ -1306,6 +1306,69 @@ select:focus {
   color-outline: 0px;
 }
 
+/* ==========
+	 CHECKBOXES
+	 @mixin ================= */
+/* basic styling */
+.form-checkboxes-1-cols {
+  margin-right: 15px;
+  margin-bottom: 25px;
+  width: auto;
+}
+
+.amenity-checkbox-label {
+  color: #FFF;
+  font: 1.2rem/1.2rem "Roboto";
+  margin-right: 30px;
+  vertical-align: middle;
+}
+
+/* animation styling */
+.amenity-checkboxes {
+  position: relative;
+  margin: 1rem 1.5rem 0 0;
+  cursor: pointer;
+}
+
+.amenity-checkboxes:before {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 2px solid #FFF;
+}
+
+.amenity-checkboxes:checked + label {
+  color: #00d1e2;
+}
+
+.amenity-checkboxes:checked:before {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  height: .65rem;
+  border-color: #00d1e2;
+  border-top-style: none;
+  border-right-style: none;
+}
+
+.amenity-checkboxes:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: #1D2735;
+  cursor: pointer;
+}
+
 /* =========================================
 	 REPORTS
    @mixin ======================================== */
@@ -1335,7 +1398,7 @@ select:focus {
 }
 
 .report-transparent-container {
-  background: #1d2735;
+  background: rgba(29, 39, 53, 0.8);
   border-radius: 5px;
   margin: 0 auto;
   padding: 1vw;
