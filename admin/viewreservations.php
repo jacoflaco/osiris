@@ -44,7 +44,6 @@
 	          <td>Reservation ID</td>
 	          <td>First Name</td>
 	          <td>Last Name</td>
-	          <td>Room #</td>
 	          <td>Hotel</td>
 						<td>City</td>
 						<td>State</td>
@@ -66,7 +65,6 @@
 								<td><?php print $row['ReservationID']; ?></td>
 	              <td><?php print $row['FirstName']; ?></td>
 	              <td><?php print $row['LastName']; ?></td>
-	              <td><?php print $row['RoomNumber']; ?></td>
 	              <td><?php print $row['HotelName']; ?></td>
 								<td><?php print $row['City']; ?></td>
 								<td><?php print $row['State']; ?></td>
@@ -88,7 +86,6 @@
 						<td>Reservation ID</td>
 	          <td>First Name</td>
 	          <td>Last Name</td>
-	          <td>Room #</td>
 	          <td>Hotel</td>
 						<td>City</td>
 						<td>State</td>

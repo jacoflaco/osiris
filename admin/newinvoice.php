@@ -16,7 +16,7 @@
 
 	$message = '';
 
-	$query = "select * from O_VW_NOTINVOICED";
+	$query = "select * from O_VW_RESERVATIONS";
   $result = mysqli_query($con, $query);
 
   $result_array = array();
@@ -44,10 +44,9 @@
 	          <td>Reservation ID</td>
 	          <td>First Name</td>
 	          <td>Last Name</td>
-	          <td>Room #</td>
 	          <td>Hotel</td>
 						<td>Country</td>
-						<td>Date of Res</td>
+						<td>Reservation Date</td>
 						<td>Price</td>
 						<td># of Rooms</td>
 						<td>Check In</td>
@@ -63,10 +62,9 @@
 								<td><?php print $row['ReservationID']; ?></td>
 	              <td><?php print $row['FirstName']; ?></td>
 	              <td><?php print $row['LastName']; ?></td>
-	              <td><?php print $row['RoomNumber']; ?></td>
 	              <td><?php print $row['HotelName']; ?></td>
 								<td><?php print $row['Country']; ?></td>
-								<td><?php print $row['DateOfReservation']; ?></td>
+								<td><?php print $row['ReservationDate']; ?></td>
 								<td><?php print $row['Price']; ?></td>
 								<td><?php print $row['NumberOfRooms']; ?></td>
 								<td><?php print $row['CheckIn']; ?></td>
@@ -82,10 +80,9 @@
 						<td>Reservation ID</td>
 	          <td>First Name</td>
 	          <td>Last Name</td>
-	          <td>Room #</td>
 	          <td>Hotel Name</td>
 						<td>Country</td>
-						<td>Date of Res</td>
+						<td>Reservation Date</td>
 						<td>Price</td>
 						<td># of Rooms</td>
 						<td>Check In</td>

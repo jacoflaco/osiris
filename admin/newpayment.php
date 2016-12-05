@@ -16,7 +16,7 @@
 
 	$message = '';
 
-	$query = "select * from O_VW_NOTPAID";
+	$query = "select * from O_VW_INVOICES";
   $result = mysqli_query($con, $query);
 
   $result_array = array();
@@ -45,7 +45,7 @@
 	          <td>Reservation ID</td>
 						<td>First Name</td>
 						<td>Last Name</td>
-	          <td>Date of Invoice</td>
+	          <td>Invoice Date</td>
 	          <td>Is Paid?</td>
 	        </tr>
 	      </thead>
@@ -59,7 +59,7 @@
 	              <td><?php print $row['ReservationID']; ?></td>
 								<td><?php print $row['FirstName']; ?></td>
 								<td><?php print $row['LastName']; ?></td>
-	              <td><?php print $row['DateOfInvoice']; ?></td>
+	              <td><?php print $row['InvoiceDate']; ?></td>
 	              <td><?php print $row['IsPaid']; ?></td>
 	            </tr>
 	            <?php
@@ -73,7 +73,7 @@
 	          <td>Reservation ID</td>
 						<td>First Name</td>
 						<td>Last Name</td>
-	          <td>Date of Invoice</td>
+	          <td>Invoice Date</td>
 	          <td>Is Paid?</td>
 	        </tr>
 	      </tfoot>
