@@ -54,7 +54,7 @@
 			<div class='form-section-divs'>
 				<input id='activate-activationcode' class='form-input-1-cols' placeholder='Activation Code' type='text' name='activationcode' required=''>
 
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='activatesubmit' value='Submit'>
+				<input id='form-submit' class='form-input-1-cols' type='submit' name='activatesubmit' value='Activate'>
 
 				<a href='login.php' class='after-form-links'>Already activated?</a>
 				<a href='register.php' class='after-form-links'>Not Registered?</a>

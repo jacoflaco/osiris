@@ -50,7 +50,7 @@
 			$_SESSION['activeuser']['password'] = $newpassword;
 			$message = "Your password has been successfully changed.";
 
-      header("location:welcome.php");
+      header("location:welcome.php?change=1");
 
 		}
 	}

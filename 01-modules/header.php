@@ -76,7 +76,7 @@
 
 						<ul id='primary'>
 							<li id='primary-list-item-1'>
-								<a href='makereservation.php' class='alt-primary-links'>make a reservation</a>
+								<a href='reservation.php' class='alt-primary-links'>make a reservation</a>
 							</li>
 							<li id='primary-list-item-2'>
 								<a href='viewreservations.php' class='alt-primary-links'>view reservations</a>
@@ -90,7 +90,7 @@
 									<li class='dropdown-list-items'><a href='changepassword.php' class='dropdown-links'>change password</a></li>
 									<li class='dropdown-list-items'><a href='logout.php' class='dropdown-links'>logout</a></li>
 								</ul>
-								<a href='' class='primary-links'>$name</a>
+								<a href='welcome.php' class='primary-links'>$name</a>
 							</li>
 						</ul>
 
@@ -107,7 +107,7 @@
 					<nav>
 
 						<ul id='secondary'>
-							<li><a href='makereservation.php' class='secondary-links'>make a reservation</a></li>
+							<li><a href='reservation.php' class='secondary-links'>make a reservation</a></li>
 							<li><a href='contact.php' class='secondary-links'>contact</a></li>
 							<li><a href='register.php' class='secondary-links'>register</a></li>
 							<li><a href='login.php' class='secondary-links'>login</a></li>

@@ -36,46 +36,55 @@
 				if(validateEmail($email) && validateEmail($confirmemail) && $email === $confirmemail) {
 					if(validatePassword($password)){
 						if($password === $confirmpassword){
-
-							$activationcode = randomCodeGenerator(20);
-
-							//escape strings
-							$firstname = mysqli_real_escape_string($con, $firstname);
-							$lastname = mysqli_real_escape_string($con, $lastname);
-							$email = mysqli_real_escape_string($con, $email);
-							$confirmemail = mysqli_real_escape_string($con, $confirmemail);
-							$password = mysqli_real_escape_string($con, $password);
-							$confirmpassword = mysqli_real_escape_string($con, $confirmpassword);
-
-							//hash password
-							$password = sha1($password);
-
-							//insert all of the information from the registration page
-							$sql = "insert into O_ADMIN values(null, '".$firstname."', '".$lastname."', '".$email."', '".$password."')";
-
-							$check = mysqli_query($con, $sql);
-
-							//if couldn't insert, print error
-							if(!$check) {
-								die("<p class='form-error'>Could not enter data: " . mysql_error() . "</p>");
+							$query = mysqli_query($con, "select AdminID from O_ADMIN where Email = '".$email."'");
+							$adminids = Array();
+							while ($row = mysqli_fetch_array($query)) {
+								$adminids[] = $row[0];
 							}
 
-							print "<p class='form-message'>You have successfully created this admin.</p>";
-							print "
-								<div class='report-data-container'>
-									<table id='registration-info-report'>
-										<tr>
-											<td class='form-field'>First Name: </td>
-											<td class='form-input'>$firstname</td></tr>
-										<tr>
-											<td class='form-field'>Last Name: </td>
-											<td class='form-input'>$lastname</td></tr>
-										<tr>
-											<td class='form-field'>Email: </td>
-											<td class='form-input'>$email</td></tr>
-									</table>
-								</div>";
+							if(sizeof($adminids) == 0) {
+								$activationcode = randomCodeGenerator(20);
 
+								//escape strings
+								$firstname = mysqli_real_escape_string($con, $firstname);
+								$lastname = mysqli_real_escape_string($con, $lastname);
+								$email = mysqli_real_escape_string($con, $email);
+								$confirmemail = mysqli_real_escape_string($con, $confirmemail);
+								$password = mysqli_real_escape_string($con, $password);
+								$confirmpassword = mysqli_real_escape_string($con, $confirmpassword);
+
+								//hash password
+								$password = sha1($password);
+
+								//insert all of the information from the registration page
+								$sql = "insert into O_ADMIN values(null, '".$firstname."', '".$lastname."', '".$email."', '".$password."')";
+
+								$check = mysqli_query($con, $sql);
+
+								//if couldn't insert, print error
+								if(!$check) {
+									die("<p class='form-error'>Could not enter data: " . mysql_error() . "</p>");
+								}
+
+								print "<p class='form-message'>You have successfully created this admin.</p>";
+								print "
+									<div class='report-data-container'>
+										<table id='registration-info-report'>
+											<tr>
+												<td class='form-field'>First Name: </td>
+												<td class='form-input'>$firstname</td></tr>
+											<tr>
+												<td class='form-field'>Last Name: </td>
+												<td class='form-input'>$lastname</td></tr>
+											<tr>
+												<td class='form-field'>Email: </td>
+												<td class='form-input'>$email</td></tr>
+										</table>
+									</div>";
+							}
+							else {
+								print "<p class='form-message'>There is already an admin registered with that email, please try a new email.";
+							}
 						}
 						else {
 							print "<p class='form-message'>Please double check that your password and confirm password fields are indentical.</p>";

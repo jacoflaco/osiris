@@ -12,7 +12,19 @@
 
 	include '01-modules/header.php';
 
-	$message = '';
+	if(isset($_POST['message'])) {
+		$message = trim($_POST['message']);
+		if($message == 1) {
+			$message = "You have entered a false date. You chose February, please be sure to choose a Day between 1-29";
+		}
+		else if($message == 2) {
+			$message = "You have entered a false date. Please be sure to choose the right month/day combination";
+		}
+	}
+	else{
+		$message = '';
+	}
+
 ?>
 
 <div class="form-container">
@@ -43,9 +55,9 @@
 
 			<div class="form-section-divs">
 				<h4 class='form-label'>Date of Birth</h4></br>
-				<input id='register-month' class='form-input-3-min-cols' placeholder="Month" type="text" name='month' class='onethird' minlength='2' maxlength='2' required="">
-				<input id='register-day' class='form-input-3-min-cols' placeholder="Day" type="text" name='day' class='onethird' minlength='2' maxlength='2' required="">
-				<input id='register-year' class='form-input-3-min-cols' placeholder="Year" type="text" name='year' class='onethird' minlength='4' maxlength='4' required="">
+				<input id='register-month' class='form-input-3-min-cols' placeholder="Month" type="number" min='01' max='12' name='month' class='onethird' minlength='2' maxlength='2' required="">
+				<input id='register-day' class='form-input-3-min-cols' placeholder="Day" type="number" min='01' max='31' name='day' class='onethird' minlength='2' maxlength='2' required="">
+				<input id='register-year' class='form-input-3-min-cols' placeholder="Year" type="number" min='1895' max='2016' name='year' class='onethird' minlength='4' maxlength='4' required="">
 				<p class="form-clarification-message">Please enter in format: MM DD YYYY</p>
 			</div>
 
@@ -53,7 +65,7 @@
 				<input id='register-phone' class='form-input-1-cols' placeholder="Phone Number" type="tel" name='phone' required="">
 				<p class="form-clarification-message">Please enter only numbers</p>
 
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='registersubmit' value='Submit'>
+				<input id='form-submit' class='form-input-1-cols' type='submit' name='registersubmit' value='Register'>
 				<a href="login.php" class="after-form-links">Already Registered? Login Here</a>
 			</div>
 

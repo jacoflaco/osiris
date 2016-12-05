@@ -32,9 +32,7 @@
 		$password = mysqli_real_escape_string($con, $password);
 
 		//hash the password to interact with database
-		//$password = sha1($password);
-
-		//TODO remove above comment and create registration page
+		$password = sha1($password);
 
 		//store the email from the user info where the password matches the one submitted
 		$emailquery = mysqli_query($con, "select email from O_ADMIN where password = '$password'");
