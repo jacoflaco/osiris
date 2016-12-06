@@ -8,9 +8,9 @@
 -->
 
 <?php session_start();
-
 	require_once '00-utility/functions.php';
 	require_once '00-utility/dbconnect.php';
+	require_once '00-utility/userSessionVerify.php';
 
 	$message = '';
 	$message2 = '';

@@ -98,7 +98,7 @@
 				<input id='login-email' class='form-input-1-cols' placeholder="Username (Email)" type="text" name='email' required="">
 				<input id='login-password' class='form-input-1-cols' placeholder="Password" type="password" name='password' required="">
 
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='loginsubmit' value='Submit'>
+				<input id='form-submit' class='form-input-1-cols' type='submit' name='loginsubmit' value='Log In'>
 
 				<a href="forgotpassword.php" class="after-form-links">Forgot Password?</a>
 			</div>

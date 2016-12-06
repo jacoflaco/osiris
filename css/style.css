@@ -1000,28 +1000,122 @@ nav {
 /* =========================================
 	 RESERVATION
    @mixin ======================================== */
+.reservation-form-header {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  top: 8vw;
+  width: 90%;
+}
+
+.less-top-margin {
+  margin-top: -40px;
+}
+
+@media screen and (max-width: 1400px) {
+  .less-top-margin-2 {
+    margin-top: -25px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .less-bottom-margin {
+    margin-bottom: -15px;
+  }
+}
+
 .spacer {
   margin-top: 80px;
 }
 
 .form-label-2-cols {
-  border: 1px solid white;
   display: inline-block;
   height: auto;
   margin: 0 25px;
-  width: 20%;
+  width: 30.2%;
   text-align: left;
 }
 
 .reservation-labels {
-  color: #DDD;
+  color: #FFF;
   font: 1.2rem/1.2rem "Roboto";
 }
 
 .form-select-1-cols {
-  margin-right: 2%;
-  width: 20%;
+  margin-right: 2.2%;
+  width: 30%;
   text-align: left;
+}
+
+.reservation-input-2-cols {
+  margin: 0 25px;
+  width: 30%;
+}
+
+/* ==============
+	 RADIO BUTTONS
+   @mixin ======================= */
+label > input {
+  visibility: hidden;
+  position: absolute;
+}
+
+label > input + .destination-boxes {
+  cursor: pointer;
+}
+
+label > input:checked + .destination-boxes {
+  background: #FFF;
+  color: #1D2735;
+}
+
+label > input + #azure-box {
+  cursor: pointer;
+}
+
+label > input:checked + #azure-box {
+  background: url(../images/image-links/azureHover.png) no-repeat;
+  background-size: cover;
+}
+
+label > input + #emerald-box {
+  cursor: pointer;
+}
+
+label > input:checked + #emerald-box {
+  background: url(../images/image-links/emeraldHover.png) no-repeat;
+  background-size: cover;
+}
+
+label > input + #villa-box {
+  cursor: pointer;
+}
+
+label > input:checked + #villa-box {
+  background: url(../images/image-links/villaHover.png) no-repeat;
+  background-size: cover;
+}
+
+#reservation-submit {
+  background: #1D2735;
+  border-radius: 3px;
+  color: #FFF;
+  cursor: pointer;
+  font: 1.4rem/1.4rem "Roboto";
+  letter-spacing: 1px;
+  margin-top: 45px;
+  padding: 25px 65px;
+  text-align: center;
+  transition: all .2s ease-in-out;
+  display: block;
+  margin: 35px auto;
+  width: 30%;
+}
+
+#reservation-submit:hover {
+  background: #141b25;
+  transform: translateY(-5px);
 }
 
 /* =========================================
@@ -1213,7 +1307,7 @@ footer {
 }
 
 .form-section-divs .form-label {
-  color: #cccccc;
+  color: #DDD;
   font: 1.2rem/1.2rem "Roboto";
   letter-spacing: 1px;
 }
@@ -1333,7 +1427,7 @@ select {
   color: #DDD;
   font: 1.2rem/1.2rem "Roboto";
   margin: 0 1%;
-  padding: 4px 0;
+  padding: 5px 0;
   padding-right: 2.5%;
   outline: 0px;
   outline-width: 10%;
@@ -1360,8 +1454,9 @@ select:focus {
 .amenity-checkbox-label {
   color: #FFF;
   font: 1.2rem/1.2rem "Roboto";
-  margin-right: 30px;
+  margin-right: 2vw;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 /* animation styling */
@@ -1379,8 +1474,8 @@ select:focus {
   position: absolute;
   left: 0;
   z-index: 1;
-  width: 1.3rem;
-  height: 1.3rem;
+  width: 1vw;
+  height: 1vw;
   border: 2px solid #FFF;
 }
 
@@ -1394,7 +1489,7 @@ select:focus {
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  height: .65rem;
+  height: .5vw;
   border-color: #00d1e2;
   border-top-style: none;
   border-right-style: none;
@@ -1404,8 +1499,8 @@ select:focus {
   content: "";
   position: absolute;
   left: 0;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.1vw;
+  height: 1.1vw;
   background: #1D2735;
   cursor: pointer;
 }
@@ -1509,4 +1604,46 @@ table.dataTable tbody td {
 
 #datatables_filter label, #datatables_info {
   color: #FFF;
+}
+
+textarea {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #008A95 4%);
+  background-position: -800px 0;
+  background-repeat: no-repeat;
+  background-size: 800px 100%;
+  border: none;
+  border-bottom: 1px solid #00a2af;
+  color: #FFF;
+  display: inline-block;
+  font: 1.2rem/1.2rem "Roboto";
+  letter-spacing: 1px;
+  padding: 12px 3px 6px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.64, 0.09, 0.08, 1);
+}
+
+textarea:focus {
+  background-position: 0 0;
+  outline: none;
+}
+
+textarea::-webkit-placeholder {
+  color: #cccccc;
+  font: 1.2rem/1.2rem "Roboto";
+  transition: all .3s ease-in-out;
+}
+
+textarea:focus::-webkit-placeholder {
+  color: #00a2af;
+  font: 1rem/1rem "Roboto";
+  transform: translateY(-30px);
+}
+
+textarea::-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.form-textarea-1-cols {
+  margin: 0 25px;
+  width: 50%;
 }

@@ -30,7 +30,7 @@
 				<input id='street-number' class='form-input-2-cols' placeholder="Street Number" type="number" name='streetnumber' required="">
 				<input id='street-name' class='form-input-2-cols' placeholder="Street Name" type="text" name='streetname' required="">
 			</div>
-			
+
 			<div class='form-section-divs'>
 				<input id='city' class='form-input-4-cols' placeholder="City" type="text" name='city' required="">
 				<input id='state' class='form-input-4-cols' placeholder="State" type="text" name='state' required="">
@@ -39,7 +39,7 @@
 			</div>
 
 			<div class='form-section-divs'>
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='newresortsubmit' value='Submit'>
+				<input id='form-submit' class='form-input-1-cols' type='submit' name='newresortsubmit' value='Create'>
 			</div>
 
 		</form>

@@ -54,7 +54,7 @@
 				<input id='register-phone' class='form-input-1-cols' placeholder="Phone Number" type="tel" name='phone' required="">
 				<p class="form-clarification-message">Please enter only numbers</p>
 
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='registersubmit' value='Submit'>
+				<input id='form-submit' class='form-input-1-cols' type='submit' name='registersubmit' value='Create'>
 			</div>
 
 		</form>

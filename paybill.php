@@ -8,15 +8,15 @@
 -->
 
 <?php session_start();
-	require_once '../00-utility/functions.php';
-	require_once '../00-utility/dbconnect.php';
-	require_once '../00-utility/sessionVerify.php';
+	require_once '00-utility/functions.php';
+	require_once '00-utility/dbconnect.php';
+	require_once '00-utility/userSessionVerify.php';
 
-	include '../01-modules/adminheader.php';
+	include '01-modules/header.php';
 
 	$message = '';
 
-	$query = "select * from O_VW_INVOICES";
+	$query = "select * from O_VW_USER_INVOICES where UserID = ".$_SESSION['activeuser']['UserID'];
   $result = mysqli_query($con, $query);
 
   $result_array = array();
@@ -43,6 +43,7 @@
 	        <tr>
 	          <td>Invoice ID</td>
 	          <td>Reservation ID</td>
+						<td>User ID</td>
 						<td>First Name</td>
 						<td>Last Name</td>
 	          <td>Invoice Date</td>
@@ -57,6 +58,7 @@
 	            <tr>
 								<td><?php print $row['InvoiceID']; ?></td>
 	              <td><?php print $row['ReservationID']; ?></td>
+								<td><?php print $row['UserID']; ?></td>
 								<td><?php print $row['FirstName']; ?></td>
 								<td><?php print $row['LastName']; ?></td>
 	              <td><?php print $row['InvoiceDate']; ?></td>
@@ -71,6 +73,7 @@
 	        <tr>
 						<td>Invoice ID</td>
 	          <td>Reservation ID</td>
+						<td>User ID</td>
 						<td>First Name</td>
 						<td>Last Name</td>
 	          <td>Invoice Date</td>
@@ -83,7 +86,7 @@
 	</div>
 
 	<div id="form-wrapper">
-		<form method="post" action='newentryconfirmation.php' id='new-entry-form'>
+		<form method="post" action='payment_confirmation.php' id='new-entry-form'>
 
 			<?php
 				print "<p class='error-message'>$message</p>"
@@ -125,7 +128,7 @@
 			</div>
 
 			<div class="form-section-divs">
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='newpaymentsubmit' value='Create'>
+				<input id='form-submit' class='form-input-1-cols' type='submit' name='newpaymentsubmit' value='Pay'>
 			</div>
 
 		</form>
@@ -135,5 +138,5 @@
 
 
 <?php
-	include '../01-modules/footer.php';
+	include '01-modules/footer.php';
 ?>

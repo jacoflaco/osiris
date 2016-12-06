@@ -23,7 +23,7 @@
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function() {
 		var table = $('#datatables').DataTable({
-			"scrollY":        "500px",
+			"scrollY":        "25vw",
 			"scrollCollapse": true,
 			"paging":         false
 		});
@@ -35,7 +35,6 @@
 	<div id="report-wrapper">
 	<h3 class="report-header">view reservations</h3>
 
-
 		<div class="report-transparent-container">
 
 			<table id='datatables'>
@@ -44,12 +43,10 @@
 	          <td>Reservation ID</td>
 	          <td>First Name</td>
 	          <td>Last Name</td>
+						<td>Accomodation</td>
 	          <td>Hotel</td>
-						<td>City</td>
-						<td>State</td>
 						<td>Country</td>
-						<td>Admin ID</td>
-						<td>Date of Res</td>
+						<td>Reservation Date</td>
 						<td>Price</td>
 						<td># of Rooms</td>
 						<td>Check In</td>
@@ -65,12 +62,10 @@
 								<td><?php print $row['ReservationID']; ?></td>
 	              <td><?php print $row['FirstName']; ?></td>
 	              <td><?php print $row['LastName']; ?></td>
+								<td><?php print $row['Description']; ?></td>
 	              <td><?php print $row['HotelName']; ?></td>
-								<td><?php print $row['City']; ?></td>
-								<td><?php print $row['State']; ?></td>
 								<td><?php print $row['Country']; ?></td>
-								<td><?php print $row['AdminID']; ?></td>
-								<td><?php print $row['DateOfReservation']; ?></td>
+								<td><?php print $row['ReservationDate']; ?></td>
 								<td><?php print $row['Price']; ?></td>
 								<td><?php print $row['NumberOfRooms']; ?></td>
 								<td><?php print $row['CheckIn']; ?></td>
@@ -86,12 +81,10 @@
 						<td>Reservation ID</td>
 	          <td>First Name</td>
 	          <td>Last Name</td>
+						<td>Accomodation</td>
 	          <td>Hotel</td>
-						<td>City</td>
-						<td>State</td>
 						<td>Country</td>
-						<td>Admin ID</td>
-						<td>Date of Res</td>
+						<td>Reservation Date</td>
 						<td>Price</td>
 						<td># of Rooms</td>
 						<td>Check In</td>

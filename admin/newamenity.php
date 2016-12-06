@@ -30,7 +30,7 @@
 				<input id='amenity-desc' class='form-input-2-cols' placeholder="Amenity Description" type="text" name='amenity' required="">
 				<input id='amenity-price' class='form-input-2-cols' placeholder="Price" type="number" name='price' required="">
 
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='newamenitysubmit' value='Submit'>
+				<input id='form-submit' class='form-input-1-cols' type='submit' name='newamenitysubmit' value='Create'>
 			</div>
 
 		</form>

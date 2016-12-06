@@ -41,7 +41,7 @@
 				<input id='register-confirmpassword' class='form-input-2-cols' placeholder="Confirm Password" type="password" name='confirmpassword' required="">
 				<p class='form-clarification-message'>Must be at least 10 characters with at least one letter and one number</p>
 
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='newadminsubmit' value='Submit'>
+				<input id='form-submit' class='form-input-1-cols' type='submit' name='newadminsubmit' value='Create'>
 			</div>
 
 		</form>

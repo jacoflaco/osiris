@@ -1,6 +1,6 @@
 <!--
 	 Project: Osiris Resorts & Destinations
-   Filename: register.php
+   Filename: login.php
 	 Creation Date: 10/15/2016
 
    Author: Jake Handwork
@@ -8,15 +8,13 @@
 -->
 
 <?php session_start();
-	require_once '../00-utility/functions.php';
-	require_once '../00-utility/dbconnect.php';
-	require_once '../00-utility/sessionVerify.php';
+	require_once '00-utility/functions.php';
+	require_once '00-utility/dbconnect.php';
+	require_once '00-utility/userSessionVerify.php';
 
-	include '../01-modules/adminheader.php';
+	include '01-modules/header.php';
 
-	$message = '';
-
-	$query = "select * from O_VW_RESERVATIONS";
+	$query = "select * from O_VW_USER_RESERVATIONS where UserID = ".$_SESSION['activeuser']['UserID'];
   $result = mysqli_query($con, $query);
 
   $result_array = array();
@@ -25,25 +23,28 @@
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function() {
 		var table = $('#datatables').DataTable({
-			"scrollY":        "300px",
+			"scrollY":        "25vw",
 			"scrollCollapse": true,
 			"paging":         false
 		});
 	})
 </script>
 
-<div class="form-container">
+<div class="report-container">
 
 	<div id="report-wrapper">
-	<h3 class="report-header">reservations to be invoiced</h3>
+	<h3 class="report-header">view reservations</h3>
+
 		<div class="report-transparent-container">
 
 			<table id='datatables'>
 	      <thead>
 	        <tr>
 	          <td>Reservation ID</td>
+						<td>User ID</td>
 	          <td>First Name</td>
 	          <td>Last Name</td>
+						<td>Accomodation</td>
 	          <td>Hotel</td>
 						<td>Country</td>
 						<td>Reservation Date</td>
@@ -60,8 +61,10 @@
 	            ?>
 	            <tr>
 								<td><?php print $row['ReservationID']; ?></td>
+								<td><?php print $row['UserID']; ?></td>
 	              <td><?php print $row['FirstName']; ?></td>
 	              <td><?php print $row['LastName']; ?></td>
+								<td><?php print $row['Description']; ?></td>
 	              <td><?php print $row['HotelName']; ?></td>
 								<td><?php print $row['Country']; ?></td>
 								<td><?php print $row['ReservationDate']; ?></td>
@@ -78,9 +81,11 @@
 	      <tfoot>
 	        <tr>
 						<td>Reservation ID</td>
+						<td>User ID</td>
 	          <td>First Name</td>
 	          <td>Last Name</td>
-	          <td>Hotel Name</td>
+						<td>Accomodation</td>
+	          <td>Hotel</td>
 						<td>Country</td>
 						<td>Reservation Date</td>
 						<td>Price</td>
@@ -96,26 +101,9 @@
 		</div>
 	</div>
 
-	<div id="form-wrapper">
-		<form method="post" action='newentryconfirmation.php' id='new-entry-form'>
-
-			<?php
-				print "<p class='error-message'>$message</p>"
-			?>
-
-			<div class="form-section-divs">
-				<input id='reservation-id' class='form-input-1-cols' placeholder="Reservation ID" type="text" name='reservationid' required="">
-				<p class="form-clarification-message">Please enter the Reservation ID of the reservation you want to invoice</p>
-
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='newinvoicesubmit' value='Create'>
-			</div>
-
-		</form>
-	</div>
-
 </div>
 
 
 <?php
-	include '../01-modules/footer.php';
+	include '01-modules/footer.php';
 ?>

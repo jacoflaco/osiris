@@ -30,7 +30,7 @@
 				<input id='hotel-name' class='form-input-1-cols' placeholder="Hotel Name" type="text" name='hotelname' required="">
 				<!-- <input id='hotel-num-rooms' class='form-input-1-cols' placeholder="# of rooms" type="text" name='hotelnumrooms' required=""> -->
 
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='newhotelsubmit' value='Submit'>
+				<input id='form-submit' class='form-input-1-cols' type='submit' name='newhotelsubmit' value='Create'>
 			</div>
 
 		</form>

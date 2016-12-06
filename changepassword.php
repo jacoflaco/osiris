@@ -8,9 +8,9 @@
 -->
 
 <?php session_start();
-
 	require_once '00-utility/functions.php';
 	require_once '00-utility/dbconnect.php';
+	require_once '00-utility/userSessionVerify.php';
 
 	$message = '';
 	$message2 = '';
@@ -63,7 +63,7 @@
 
 <div class="form-container">
 	<div id="form-wrapper">
-		<h3 class="form-header">osiris member login</h3>
+		<h3 class="form-header">change password</h3>
 
 		<?php print "<p class='form-message'>$message<br>$message2</p>"; ?>
 
@@ -73,7 +73,7 @@
 				<input id='change-password' class='form-input-1-cols' placeholder="Password" type="password" name='password' required="">
 				<input id='change-newpassword' class='form-input-1-cols' placeholder="New Password" type="password" name='newpassword' required="">
 
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='changesubmit' value='Submit'>
+				<input id='form-submit' class='form-input-1-cols' type='submit' name='changesubmit' value='Change'>
 
 			</div>
 

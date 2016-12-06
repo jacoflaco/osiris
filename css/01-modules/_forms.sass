@@ -73,7 +73,7 @@
 		padding-top: 15px
 
 	.form-label
-		color: darken($white, 20%)
+		color: $lightgray
 		font: 1.2rem/1.2rem $bodytext
 		letter-spacing: 1px
 
@@ -172,7 +172,7 @@ select
 	color: $lightgray
 	font: 1.2rem/1.2rem $bodytext
 	margin: 0 1%
-	padding: 4px 0
+	padding: 5px 0
 	padding-right: 2.5%
 	outline: 0px
   width: 10%
@@ -197,8 +197,9 @@ select:focus
 .amenity-checkbox-label
 	color: $white
 	font: 1.2rem/1.2rem $bodytext
-	margin-right: 30px
+	margin-right: 2vw
 	vertical-align: middle
+	cursor: pointer
 
 /* animation styling */
 .amenity-checkboxes
@@ -214,8 +215,8 @@ select:focus
   position: absolute
   left: 0
   z-index: 1
-  width: 1.3rem
-  height: 1.3rem
+  width: 1vw
+  height: 1vw
   border: 2px solid $white
 
 .amenity-checkboxes:checked + label
@@ -227,7 +228,7 @@ select:focus
   -ms-transform: rotate(-45deg)
   -o-transform: rotate(-45deg)
   transform: rotate(-45deg)
- 	height: .65rem
+ 	height: .5vw
   border-color: lighten($bluegreen, 15%)
   border-top-style: none
   border-right-style: none
@@ -237,8 +238,8 @@ select:focus
   position: absolute
   //top: -0.125rem
   left: 0
-  width: 1.6rem
-  height: 1.6rem
+  width: 1.1vw
+  height: 1.1vw
   background: $darkblue
   cursor: pointer
 
@@ -332,3 +333,41 @@ table.dataTable tbody td
 
 #datatables_filter label, #datatables_info
 	color: $white
+
+
+textarea
+	//bottom border animation
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 96%, $bluegreen 4%)
+	background-position: -800px 0
+	background-repeat: no-repeat
+	background-size: 800px 100%
+	border: none
+	border-bottom: 1px solid lighten($bluegreen, 5%)
+	color: $white
+	display: inline-block
+	font: 1.2rem/1.2rem $bodytext
+	letter-spacing: 1px
+	padding: 12px 3px 6px
+	position: relative
+	transition: all .5s cubic-bezier(.64,.09,.08,1)
+
+	&:focus
+		background-position: 0 0
+		outline: none
+
+	&::-webkit-placeholder
+		color: darken($white, 20%)
+		font: 1.2rem/1.2rem $bodytext
+		transition: all .3s ease-in-out
+
+	&:focus::-webkit-placeholder
+		color: lighten($bluegreen, 5%)
+		font: 1rem/1rem $bodytext
+		transform: translateY(-30px)
+
+	&::-webkit-autofill
+		-webkit-box-shadow: 0 0 0px 1000px white inset
+
+.form-textarea-1-cols
+	margin: 0 25px
+	width: 50%

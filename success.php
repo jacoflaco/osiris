@@ -11,6 +11,7 @@
 	require_once '00-utility/functions.php';
 	require_once '00-utility/mail/mail.class.php';
 	require_once '00-utility/dbconnect.php';
+	require_once '00-utility/userSessionVerify.php';
 
 	include '01-modules/header.php';
 ?>

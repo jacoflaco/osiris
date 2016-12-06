@@ -73,7 +73,7 @@
 				<input id='change-password' class='form-input-1-cols' placeholder="Password" type="password" name='password' required="">
 				<input id='change-newpassword' class='form-input-1-cols' placeholder="New Password" type="password" name='newpassword' required="">
 
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='changesubmit' value='Submit'>
+				<input id='form-submit' class='form-input-1-cols' type='submit' name='changesubmit' value='Change Password'>
 
 			</div>
 

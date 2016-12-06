@@ -87,7 +87,7 @@
 			</div>
 
 			<div class="form-section-divs">
-				<input id='form-submit' class='form-input-1-cols' type='submit' name='newreservationsubmit' value='Submit'>
+				<input id='form-submit' class='form-input-1-cols' type='submit' name='newreservationsubmit' value='Create'>
 			</div>
 
 		</form>

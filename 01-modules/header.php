@@ -13,6 +13,13 @@
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<title>Experience Osiris</title>
+
+	<link rel="stylesheet" type="text/css" href="css/datatables/jquery.dataTables_themeroller.css">
+  <link rel="stylesheet" type="text/css" href="css/datatables/jquery.dataTables.min.css">
+
+  <script type="text/javascript" language="javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="js/jquery.dataTables.min.js"></script>
+
 	<link rel='stylesheet' type='text/css' href='css/style.css'>
 
 	<!-- Favicon Code -->
@@ -86,6 +93,7 @@
 							</li>
 							<li id='primary-list-item-4'>
 								<ul class='dropdown-menu'>
+									<li class='dropdown-list-items'><a href='viewreservations.php' class='dropdown-links'>view reservations</a></li>
 									<li class='dropdown-list-items'><a href='paybill.php' class='dropdown-links'>pay bills</a></li>
 									<li class='dropdown-list-items'><a href='changepassword.php' class='dropdown-links'>change password</a></li>
 									<li class='dropdown-list-items'><a href='logout.php' class='dropdown-links'>logout</a></li>
