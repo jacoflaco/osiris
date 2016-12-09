@@ -74,6 +74,9 @@
 			}
 		}
 	}
+	else if(isset($_SESSION['activeuser'])) {
+		header("location: welcome.php");
+	}
 
 ?>
 

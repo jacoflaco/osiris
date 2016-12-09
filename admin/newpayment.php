@@ -25,7 +25,7 @@
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function() {
 		var table = $('#datatables').DataTable({
-			"scrollY":        "200px",
+			"scrollY":        "7vw",
 			"scrollCollapse": true,
 			"paging":         false
 		});

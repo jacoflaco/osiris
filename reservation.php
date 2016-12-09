@@ -15,6 +15,7 @@
 	include '01-modules/header.php';
 
 ?>
+
 <form id='user-reservation-form' action="reservation_confirmation.php" method="post">
 <div class="darkbanner">
 <!--	<img class="banner-image" src="images/index/banner.jpg"/>-->
@@ -30,8 +31,8 @@
 			</div>
 
 			<div class='form-section-divs less-top-margin'>
-				<input id='checkin' class='reservation-input-2-cols' type='date' name='checkin'>
-				<input id='checkout' class='reservation-input-2-cols' type='date' name='checkout'>
+				<input id='checkin' class='reservation-input-2-cols' type='date' min="<?php print date('Y-m-d'); ?>" name='checkin'>
+				<input id='checkout' class='reservation-input-2-cols' type='date' min="<?php print date('Y-m-d', strtotime('tomorrow')); ?>" name='checkout'>
 			</div>
 
 			<div class='form-section-divs less-top-margin-2'>

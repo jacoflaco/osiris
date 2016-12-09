@@ -93,8 +93,8 @@
 							</li>
 							<li id='primary-list-item-4'>
 								<ul class='dropdown-menu'>
-									<li class='dropdown-list-items'><a href='viewreservations.php' class='dropdown-links'>view reservations</a></li>
 									<li class='dropdown-list-items'><a href='paybill.php' class='dropdown-links'>pay bills</a></li>
+									<li class='dropdown-list-items'><a href='cancelreservation.php' class='dropdown-links'>cancel reservation</a></li>
 									<li class='dropdown-list-items'><a href='changepassword.php' class='dropdown-links'>change password</a></li>
 									<li class='dropdown-list-items'><a href='logout.php' class='dropdown-links'>logout</a></li>
 								</ul>
