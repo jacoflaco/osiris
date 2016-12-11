@@ -45,9 +45,9 @@
 
 	<div class="destinations">
 
-		<a href="puertovallarta.php" class="destination-links">
+		<a href="nuevovallarta.php" class="destination-links">
 			<div class="destination-boxes">
-				<p class="city-names">puerto vallarta</p>
+				<p class="city-names">nuevo vallarta</p>
 				<p class="country-names">mexico</p>
 				<img src="images/image-links/dolphin.png" alt="">
 			</div>
@@ -73,7 +73,7 @@
 				<img src="images/image-links/mountains.png" alt="">
 			</div>
 		</a>
-		<a href="villingiliisland.php" class="destination-links">
+		<a href="villingili.php" class="destination-links">
 			<div class="destination-boxes">
 				<p class="city-names">villingili island</p>
 				<p class="country-names">maldives</p>
@@ -93,10 +93,12 @@
 
 	<div class="text-sections">
 		<h3 class="text-header"><span>Visit Us All Around The World</span></h2>
-		<p class='body-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum distinctio neque inventore quo commodi ipsam adipisci, animi, rerum saepe amet nulla ratione unde doloribus odio ad aperiam et assumenda. Ratione! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus doloribus neque corrupti exercitationem autem, consequatur quaerat a maxime repellat possimus fugit illo, distinctio nesciunt, aliquid enim magni nobis laborum blanditiis!</br></br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque porro voluptate non ipsum praesentium nemo, ipsam ad error facere natus ea suscipit repellat placeat, vitae, asperiores quos culpa laboriosam consectetur.</p>
+		<p class='body-text'>Osiris is a collection of luxury resorts, located in six stunning destinations
+			along the most beautiful beaches in the world. Here, everything has been created for your happiness —
+			luxurious accommodations, endless pools, world-class restaurants, activities for all ages, and a staff
+			that caters to your every need.<br><br>
+			Whatever brings you happiness, you’ll find it at Osiris.</p>
 	</div>
-
-
 </div>
 
 
@@ -129,9 +131,9 @@
 	</div>
 
 	<div class="text-sections">
-		<h3 class="text-header"><span>Check Out Our 3 Hotels</span></h2>
-		<p class='body-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum distinctio neque inventore quo commodi ipsam adipisci, animi, rerum saepe amet nulla ratione unde doloribus odio ad aperiam et assumenda. Ratione! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus doloribus neque corrupti exercitationem autem, consequatur quaerat a maxime repellat possimus fugit illo, distinctio nesciunt, aliquid enim magni nobis laborum blanditiis!</br></br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque porro voluptate non ipsum praesentium nemo, ipsam ad error facere natus ea suscipit repellat placeat, vitae, asperiores quos culpa laboriosam consectetur.</p>
-	</div>
+		<h3 class="text-header"><span>Check Out Our Resort Hotels</span></h2>
+		<p class='body-text'>Your days at Osiris begin and end in the spacious accommodations of our resort hotels —
+			impeccably designed spaces where you have everything you need for a perfect vacation.</p></div>
 </div>
 
 <?php

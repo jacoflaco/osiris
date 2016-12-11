@@ -50,14 +50,14 @@
 						<ul id='secondary'>
 							<li id='secondary-list-item-1'>
 								<ul class='dropdown-menu'>
-									<li class='dropdown-list-items'><a href='puertovallarta.php' class='dropdown-links'>puerto vallarta, mexico</a></li>
+									<li class='dropdown-list-items'><a href='nuevovallarta.php' class='dropdown-links'>nuevo vallarta, mexico</a></li>
 									<li class='dropdown-list-items'><a href='northshore.php' class='dropdown-links'>north shore, o'ahu, hawaii</a></li>
 									<li class='dropdown-list-items'><a href='emeraldbay.php' class='dropdown-links'>emerald bay, bahamas</a></li>
 									<li class='dropdown-list-items'><a href='zermatt.php' class='dropdown-links'>zermatt, switzerland</a></li>
 									<li class='dropdown-list-items'><a href='villingili.php' class='dropdown-links'>villingili island, maldvies</a></li>
-									<li class='dropdown-list-items'><a href='motupitiaahu.php' class='dropdown-links'>motu piti a'ahu, bora bora</a></li>
+									<li class='dropdown-list-items'><a href='motupitiaau.php' class='dropdown-links'>motu piti a'au, bora bora</a></li>
 								</ul>
-								<a href='destinations.php' class='secondary-links'>destinations</a></li>
+								<a class='secondary-links'>destinations</a></li>
 							<li id='secondary-list-item-2'>
 								<ul class='dropdown-menu'>
 									<li class='dropdown-list-items'><a href='travelinfo.php' class='dropdown-links'>travel info</a></li>
@@ -71,14 +71,14 @@
 									<li class='dropdown-list-items'><a href='whoweare.php' class='dropdown-links'>who we are</a></li>
 									<li class='dropdown-list-items'><a href='osirismembership.php' class='dropdown-links'>osiris membership</a></li>
 								</ul>
-								<a href='aboutosiris.php' class='secondary-links'>about</a></li>
+								<a class='secondary-links'>about</a></li>
 							<li id='secondary-list-item-4'>
 								<ul class='dropdown-menu'>
 									<li class='dropdown-list-items'><a href='azure.php' class='dropdown-links'>azure</a></li>
 									<li class='dropdown-list-items'><a href='emerald.php' class='dropdown-links'>emerald chateau</a></li>
 									<li class='dropdown-list-items'><a href='villa.php' class='dropdown-links'>villa la luna</a></li>
 								</ul>
-								<a href='resorthotels.php' class='secondary-links'>resort hotels</a></li>
+								<a class='secondary-links'>resort hotels</a></li>
 						</ul>
 
 						<ul id='primary'>
@@ -124,14 +124,14 @@
 						<ul id='primary'>
 							<li id='primary-list-item-1'>
 								<ul class='dropdown-menu'>
-									<li class='dropdown-list-items'><a href='puertovallarta.php' class='dropdown-links'>puerto vallarta, mexico</a></li>
+									<li class='dropdown-list-items'><a href='nuevovallarta.php' class='dropdown-links'>nuevo vallarta, mexico</a></li>
 									<li class='dropdown-list-items'><a href='northshore.php' class='dropdown-links'>north shore, o'ahu, hawaii</a></li>
 									<li class='dropdown-list-items'><a href='emeraldbay.php' class='dropdown-links'>emerald bay, bahamas</a></li>
 									<li class='dropdown-list-items'><a href='zermatt.php' class='dropdown-links'>zermatt, switzerland</a></li>
 									<li class='dropdown-list-items'><a href='villingili.php' class='dropdown-links'>villingili island, maldvies</a></li>
-									<li class='dropdown-list-items'><a href='motupitiaahu.php' class='dropdown-links'>motu piti a'ahu, bora bora</a></li>
+									<li class='dropdown-list-items'><a href='motupitiaau.php' class='dropdown-links'>motu piti a'au, bora bora</a></li>
 								</ul>
-								<a href='destinations.php' class='primary-links'>destinations</a>
+								<a class='primary-links'>destinations</a>
 							</li>
 							<li id='primary-list-item-2'>
 								<ul class='dropdown-menu'>
@@ -147,7 +147,7 @@
 									<li class='dropdown-list-items'><a href='whoweare.php' class='dropdown-links'>who we are</a></li>
 									<li class='dropdown-list-items'><a href='osirismembership.php' class='dropdown-links'>osiris membership</a></li>
 								</ul>
-								<a href='aboutosiris.php' class='primary-links'>about osiris</a>
+								<a class='primary-links'>about osiris</a>
 							</li>
 							<li id='primary-list-item-4'>
 								<ul class='dropdown-menu'>
@@ -155,7 +155,7 @@
 									<li class='dropdown-list-items'><a href='emerald.php' class='dropdown-links'>emerald chateau</a></li>
 									<li class='dropdown-list-items'><a href='villa.php' class='dropdown-links'>villa la luna</a></li>
 								</ul>
-								<a href='resorthotels.php' class='primary-links'>resort hotels</a>
+								<a class='primary-links'>resort hotels</a>
 							</li>
 						</ul>
 

@@ -80,7 +80,7 @@
 		<label>
 		  <input type="radio" name="resort" value="1" required>
 				<div class="destination-boxes">
-					<p class="city-names">nuerto vallarta</p>
+					<p class="city-names">nuevo vallarta</p>
 					<p class="country-names">mexico</p>
 					<img src="images/image-links/dolphin.png" alt="">
 				</div>
