@@ -16,12 +16,11 @@
 			<li class="footer-link-items"><a href="emeraldbay.php" class="footer-links">emerald bay, bahamas</a></li>
 			<li class="footer-link-items"><a href="zermatt.php" class="footer-links">zermatt, switzerland</a></li>
 			<li class="footer-link-items"><a href="villingili.php" class="footer-links">villingili island, maldives</a></li>
-			<li class="footer-link-items"><a href="motupitiaau" class="footer-links">motu piti a'au, bora bora</a></li>
+			<li class="footer-link-items"><a href="motupitiaau.php" class="footer-links">motu piti a'au, bora bora</a></li>
 		</ul>
 		<ul class="footer-link-lists">
 			<li class="footer-link-header">experience osiris</li>
-			<li class="footer-link-items"><a href="travelinfo,php" class="footer-links">travel info</a></li>
-			<li class="footer-link-items"><a href="activities.php" class="footer-links">activities</a></li>
+			<li class="footer-link-items"><a href="dining.php" class="footer-links">dining</a></li>
 			<li class="footer-link-items"><a href="spa.php" class="footer-links">spa</a></li>
 			<li class="footer-link-items"><a href="entertainment.php" class="footer-links">entertainment</a></li>
 		</ul>

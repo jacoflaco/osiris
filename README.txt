@@ -55,6 +55,17 @@ placeholder information used from a combination of other similar resort sites wh
    was hindering my work with the back-end. If I had more time, I would plan the site a little better to give it a more responsive design.
    I created it with some responsive characteristics, but didn't get to implement it.
 
+4. I would create an error/message for all pages if something goes wrong or something is successful.
+   I can't think of any of the top of my head that don't have it, but I know I skipped some.
+
+5. Somewhere in the last couple of weeks, the search bar from the datatables in the views disappeared. I didn't even mess with it,
+   but if I had more time I would figure it out
+
+6. On the main page with the resort/hotel boxes, those do not update with the database. Neither do the ones on the user registration page
+   On the admin reservation page it is a dropdown list and updates with the database
+
+7. I would allow for updating the database such as user information, reservation information, payment details, etc. As of now,
+   the only way to do that is through phpMyAdmin.
 
 
 ====================

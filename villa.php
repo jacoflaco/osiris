@@ -118,8 +118,8 @@
 			$('#info2').css({'display': 'none'});
 			$('#info3').css({'display': 'none'});
 			$('#info4').css({'display': 'none'});
-			$('#info5').css({'display': 'block'});
-			$('#info6').css({'display': 'none'});
+			$('#info5').css({'display': 'none'});
+			$('#info6').css({'display': 'block'});
 			$('#slide-right-hotels').css({'background': 'url(images/information/big/six.jpg) no-repeat', 'background-size': 'cover', 'background-position': 'center'});
 		});
 	</script>

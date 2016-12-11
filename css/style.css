@@ -1815,6 +1815,10 @@ textarea::-webkit-autofill {
   display: none;
 }
 
+#info6 {
+  display: none;
+}
+
 /* ========
   content
   @mixin ========== */

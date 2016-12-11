@@ -82,8 +82,8 @@
 			</div>
 
 			<div class='form-section-divs'>
-				<input id='checkin' class='form-input-2-cols' type='date' name='checkin'>
-				<input id='checkout' class='form-input-2-cols' type='date' name='checkout'>
+				<input id='checkin' class='form-input-2-cols' type='date' min="<?php print date('Y-m-d'); ?>" name='checkin'>
+				<input id='checkout' class='form-input-2-cols' type='date' min="<?php print date('Y-m-d', strtotime('tomorrow')); ?>" name='checkout'>
 			</div>
 
 			<div class="form-section-divs">

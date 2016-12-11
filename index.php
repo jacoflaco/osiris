@@ -17,7 +17,7 @@
 <!--	<img class="banner-image" src="images/index/banner.jpg"/>-->
 	<div class="headline">
 		<h1 class="headline-text">e<span></span>xperience e<span></span>xotic</h1> <!--puts padding between 'e' and 'x' -->
-		<a class="headline-btn" href="experience.php">e<span></span>xpierence osiris</a>
+		<a class="headline-btn" href="experienceosiris.php">e<span></span>xpierence osiris</a>
 	</div>
 </div>
 
