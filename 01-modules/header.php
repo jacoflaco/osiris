@@ -60,8 +60,7 @@
 								<a class='secondary-links'>destinations</a></li>
 							<li id='secondary-list-item-2'>
 								<ul class='dropdown-menu'>
-									<li class='dropdown-list-items'><a href='travelinfo.php' class='dropdown-links'>travel info</a></li>
-									<li class='dropdown-list-items'><a href='activities.php' class='dropdown-links'>activities</a></li>
+									<li class='dropdown-list-items'><a href='dining.php' class='dropdown-links'>dining</a></li>
 									<li class='dropdown-list-items'><a href='spa.php' class='dropdown-links'>spa</a></li>
 									<li class='dropdown-list-items'><a href='entertainment.php' class='dropdown-links'>entertainment</a></li>
 								</ul>
@@ -135,8 +134,7 @@
 							</li>
 							<li id='primary-list-item-2'>
 								<ul class='dropdown-menu'>
-									<li class='dropdown-list-items'><a href='travelinfo.php' class='dropdown-links'>travel info</a></li>
-									<li class='dropdown-list-items'><a href='activities.php' class='dropdown-links'>activities</a></li>
+									<li class='dropdown-list-items'><a href='dining.php' class='dropdown-links'>dining</a></li>
 									<li class='dropdown-list-items'><a href='spa.php' class='dropdown-links'>spa</a></li>
 									<li class='dropdown-list-items'><a href='entertainment.php' class='dropdown-links'>entertainment</a></li>
 								</ul>

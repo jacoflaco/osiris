@@ -750,6 +750,60 @@ nav {
   width: 100%;
 }
 
+.experience-banner {
+  background: url("../images/information/experience/otherbanner.jpg") top no-repeat fixed;
+  background-size: 100%;
+  border-bottom: 10px solid #008A95;
+  display: block;
+  height: 33vw;
+  width: 100%;
+}
+
+.dining-banner {
+  background: url("../images/information/experience/dining-banner.jpg") top no-repeat fixed;
+  background-size: 100%;
+  border-bottom: 10px solid #008A95;
+  display: block;
+  height: 33vw;
+  width: 100%;
+}
+
+.entertainment-banner {
+  background: url("../images/information/experience/entertainment-banner.jpg") top no-repeat fixed;
+  background-size: 100%;
+  border-bottom: 10px solid #008A95;
+  display: block;
+  height: 33vw;
+  width: 100%;
+}
+
+.who-banner {
+  background: url("../images/information/about/who-banner.jpg") top no-repeat fixed;
+  background-size: 100%;
+  border-bottom: 10px solid #008A95;
+  display: block;
+  height: 33vw;
+  width: 100%;
+}
+
+.membership-banner {
+  background: url("../images/information/about/membership-banner.jpg") top no-repeat fixed;
+  background-size: 100%;
+  border-bottom: 10px solid #008A95;
+  display: block;
+  height: 33vw;
+  width: 100%;
+}
+
+.spa-banner {
+  background: url("../images/information/experience/spa-banner.jpg") top no-repeat fixed;
+  background-size: 100%;
+  border-bottom: 10px solid #008A95;
+  display: block;
+  height: 33vw;
+  width: 100%;
+}
+
 .darkbanner {
   background: url("../images/index/bannerdark.jpg") top no-repeat fixed;
   background-size: 100%;
@@ -1840,4 +1894,38 @@ textarea::-webkit-autofill {
   font: .9rem/1.2rem "Gilroy";
   letter-spacing: 2px;
   padding: 25px 15px 15px;
+}
+
+.headline-image {
+  margin-top: -100px;
+}
+
+.info-wrapper {
+  margin: 0 auto;
+  width: 55%;
+}
+
+.info-items {
+  height: 250px;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+.info-images {
+  float: left;
+  height: 260px;
+  padding-right: 25px;
+  width: 405px;
+}
+
+.info-header {
+  color: #444;
+  font: 1.5rem/1.5rem "Gilroy";
+  padding-bottom: 25px;
+}
+
+.info-text {
+  color: #444;
+  font: 1.1rem/1.4rem "Gilroy";
+  letter-spacing: 2px;
 }

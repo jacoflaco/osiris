@@ -17,12 +17,12 @@
 <!--	<img class="banner-image" src="images/index/banner.jpg"/>-->
 	<div class="headline">
 		<!-- <h1 class="headline-text">azure</h1> <!--puts padding between 'e' and 'x' -->
-		<img class='headline-image' src='images/information/azure.png'/>
+		<img class='headline-image' src='images/information/emerald.png'/>
 	</div>
 </div>
 
 <div class="section-wrapper">
-	<h2 class="section-header">unparalleled experience in luxury vacationing</h2>
+	<h2 class="section-header">where happiness is sacred</h2>
 	<span><img src="images/misc/header-flower.png" alt="" class="section-header-flower"></span>
 	<hr>
 
@@ -30,7 +30,7 @@
 		<div class='slide-left'>
 			<div class='slide-left-header-hotels'>
 				<h3 class='slide-header'>everything you want</h3>
-				<p class='slide-header-text'>Azure is the premier resort hotel in our portfolio. Everything has been designed with your comfort and pleasure in mind.</p>
+				<p class='slide-header-text'>Enter a world where ancient and modern mix for a magical result. Here, families come to laugh and play and get away from it all. </p>
 			</div>
 			<div class='slide-nav-hotels'>
 				<a id='link1' class='hotel-nav-buttons'>one bedroom suite<span class='flecha'>&#8250</span></a>
